@@ -1,0 +1,37 @@
+/* Dashboard */
+"dashboard.title" = "Dashboard";
+"dashboard.netWorth" = "Net Worth";
+"dashboard.income" = "Income";
+"dashboard.expenses" = "Expenses";
+
+/* Accounts */
+"accounts.title" = "Accounts";
+"accounts.new" = "New Account";
+"accounts.empty" = "No accounts yet";
+
+/* Transactions */
+"transactions.title" = "Transactions";
+"transactions.new" = "New Transaction";
+"transactions.empty" = "No transactions yet";
+
+/* Budget */
+"budget.title" = "Budget";
+"budget.new" = "New Budget";
+"budget.overBudget" = "Over Budget!";
+
+/* Investment */
+"investment.title" = "Investments";
+"investment.portfolios" = "Portfolios";
+"investment.simulator" = "Simulator";
+
+/* Forecast */
+"forecast.title" = "Forecast";
+"forecast.generate" = "Generate Forecast";
+"forecast.compare" = "Compare Scenarios";
+
+/* Common */
+"common.save" = "Save";
+"common.cancel" = "Cancel";
+"common.delete" = "Delete";
+"common.edit" = "Edit";
+"common.error" = "Error";
