@@ -1,6 +1,6 @@
 import Foundation
 
-@Observable
+@MainActor @Observable
 final class TransactionFormViewModel {
     private let addTransaction: AddTransactionUseCase
     private let fetchAccounts: FetchAccountsUseCase

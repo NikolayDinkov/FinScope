@@ -1,8 +1,8 @@
 import SwiftUI
 
-@Observable
+@MainActor @Observable
 final class AccountsCoordinator {
-    let router = NavigationRouter<AccountRoute>()
+    var router = NavigationRouter<AccountRoute>()
 
     let makeListViewModel: () -> AccountListViewModel
     let makeDetailViewModel: (Account) -> AccountDetailViewModel

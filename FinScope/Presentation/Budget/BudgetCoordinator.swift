@@ -1,8 +1,8 @@
 import SwiftUI
 
-@Observable
+@MainActor @Observable
 final class BudgetCoordinator {
-    let router = NavigationRouter<BudgetRoute>()
+    var router = NavigationRouter<BudgetRoute>()
 
     let makeOverviewViewModel: () -> BudgetOverviewViewModel
     let makeFormViewModel: (Budget?) -> BudgetFormViewModel

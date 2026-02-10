@@ -1,8 +1,8 @@
 import SwiftUI
 
-@Observable
+@MainActor @Observable
 final class ForecastCoordinator {
-    let router = NavigationRouter<ForecastRoute>()
+    var router = NavigationRouter<ForecastRoute>()
 
     let makeViewModel: () -> ForecastViewModel
 

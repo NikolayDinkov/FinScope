@@ -1,6 +1,6 @@
 import Foundation
 
-@Observable
+@MainActor @Observable
 final class AccountFormViewModel {
     private let createAccount: CreateAccountUseCase
     private let accountRepository: any AccountRepositoryProtocol

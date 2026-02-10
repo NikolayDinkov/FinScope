@@ -1,8 +1,8 @@
 import SwiftUI
 
-@Observable
+@MainActor @Observable
 final class TransactionsCoordinator {
-    let router = NavigationRouter<TransactionRoute>()
+    var router = NavigationRouter<TransactionRoute>()
 
     let makeListViewModel: () -> TransactionListViewModel
     let makeFormViewModel: (Transaction?) -> TransactionFormViewModel

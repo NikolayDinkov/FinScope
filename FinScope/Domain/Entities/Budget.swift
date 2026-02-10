@@ -1,6 +1,6 @@
 import Foundation
 
-struct Budget: Identifiable, Equatable, Sendable {
+struct Budget: Identifiable, Hashable, Sendable {
     let id: UUID
     var name: String
     var period: BudgetPeriod

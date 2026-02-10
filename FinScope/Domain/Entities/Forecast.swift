@@ -1,6 +1,6 @@
 import Foundation
 
-struct Forecast: Identifiable, Equatable, Sendable {
+struct Forecast: Identifiable, Hashable, Sendable {
     let id: UUID
     var name: String
     let createdAt: Date
@@ -25,7 +25,7 @@ struct Forecast: Identifiable, Equatable, Sendable {
     }
 }
 
-struct ForecastMonth: Equatable, Sendable, Codable {
+struct ForecastMonth: Hashable, Sendable, Codable {
     let month: Int
     var income: Decimal
     var expenses: Decimal

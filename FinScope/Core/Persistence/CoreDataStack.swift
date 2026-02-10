@@ -23,7 +23,7 @@ final class CoreDataStack: @unchecked Sendable {
         }
 
         persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
-        persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        persistentContainer.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
     }
 
     func newBackgroundContext() -> NSManagedObjectContext {

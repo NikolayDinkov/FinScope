@@ -1,6 +1,6 @@
 import Foundation
 
-@Observable
+@MainActor @Observable
 final class BudgetFormViewModel {
     private let createBudget: CreateBudgetUseCase
 

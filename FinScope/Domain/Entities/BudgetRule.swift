@@ -1,6 +1,6 @@
 import Foundation
 
-struct BudgetRule: Identifiable, Equatable, Sendable {
+struct BudgetRule: Identifiable, Hashable, Sendable {
     let id: UUID
     var ruleType: BudgetRuleType
     var limitAmount: Decimal?

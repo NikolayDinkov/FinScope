@@ -1,6 +1,6 @@
 import Foundation
 
-@Observable
+@MainActor @Observable
 final class DashboardViewModel {
     private let fetchAccounts: FetchAccountsUseCase
     private let fetchTransactions: FetchTransactionsUseCase

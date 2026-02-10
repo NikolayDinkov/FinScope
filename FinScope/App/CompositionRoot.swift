@@ -1,6 +1,6 @@
 import Foundation
 
-@Observable
+@MainActor @Observable
 final class CompositionRoot {
     // Core
     let coreDataStack: CoreDataStack

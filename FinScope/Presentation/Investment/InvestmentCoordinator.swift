@@ -1,8 +1,8 @@
 import SwiftUI
 
-@Observable
+@MainActor @Observable
 final class InvestmentCoordinator {
-    let router = NavigationRouter<InvestmentRoute>()
+    var router = NavigationRouter<InvestmentRoute>()
 
     let makeListViewModel: () -> PortfolioListViewModel
     let makeSimulatorViewModel: (Portfolio) -> SimulatorViewModel

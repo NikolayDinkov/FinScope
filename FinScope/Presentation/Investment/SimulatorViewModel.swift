@@ -1,6 +1,6 @@
 import Foundation
 
-@Observable
+@MainActor @Observable
 final class SimulatorViewModel {
     private let simulatePortfolio: SimulatePortfolioUseCase
     private let assetFactory: AssetFactoryProtocol

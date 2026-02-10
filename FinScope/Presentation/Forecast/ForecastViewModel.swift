@@ -1,6 +1,6 @@
 import Foundation
 
-@Observable
+@MainActor @Observable
 final class ForecastViewModel {
     private let generateForecast: GenerateForecastUseCase
     private let forecastRepository: any ForecastRepositoryProtocol

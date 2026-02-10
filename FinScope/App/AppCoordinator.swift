@@ -1,6 +1,6 @@
 import Foundation
 
-@Observable
+@MainActor @Observable
 final class AppCoordinator {
     let accountsCoordinator: AccountsCoordinator
     let transactionsCoordinator: TransactionsCoordinator

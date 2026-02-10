@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-@Observable
+@MainActor @Observable
 final class BudgetOverviewViewModel {
     private let evaluateBudget: EvaluateBudgetUseCase
     private let budgetRepository: any BudgetRepositoryProtocol

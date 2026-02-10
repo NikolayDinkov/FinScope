@@ -1,6 +1,6 @@
 import Foundation
 
-@Observable
+@MainActor @Observable
 final class PortfolioListViewModel {
     private let portfolioRepository: any PortfolioRepositoryProtocol
     private let createPortfolio: CreatePortfolioUseCase

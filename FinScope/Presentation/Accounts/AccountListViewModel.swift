@@ -1,6 +1,6 @@
 import Foundation
 
-@Observable
+@MainActor @Observable
 final class AccountListViewModel {
     private let fetchAccounts: FetchAccountsUseCase
     private let deleteAccount: DeleteAccountUseCase

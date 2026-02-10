@@ -1,6 +1,6 @@
 import Foundation
 
-struct Portfolio: Identifiable, Equatable, Sendable {
+struct Portfolio: Identifiable, Hashable, Sendable {
     let id: UUID
     var name: String
     let createdAt: Date
