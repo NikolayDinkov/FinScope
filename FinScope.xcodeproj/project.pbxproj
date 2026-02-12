@@ -14,7 +14,6 @@
 		5AB154CB2F3E807500412C7D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB154A52F3E807500412C7D /* AppCoordinator.swift */; };
 		5AB154CC2F3E807500412C7D /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB154A62F3E807500412C7D /* AppCoordinatorView.swift */; };
 		5AB154CF2F3E80CC00412C7D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB154CD2F3E80CC00412C7D /* AppState.swift */; };
-		8B9999B1C8B047511F1998E8 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 2F88FD64600D4498217DCDD9 /* Preview Content */; };
 		C9ACD8A46690C2A85410AA1C /* FinScopeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A156935D480CB151D934E7A /* FinScopeUITests.swift */; };
 		D3D0FCF12D178AF59793148F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4069ACC4B1B0DD54C9682123 /* Assets.xcassets */; };
 		ED71D6C7DEDA9961826CA09F /* FinScopeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E3F53CBA8D035EC5C697 /* FinScopeTests.swift */; };
@@ -51,7 +50,6 @@
 
 /* Begin PBXFileReference section */
 		2D1A7D646616E50078F042A1 /* FinScopeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinScopeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2F88FD64600D4498217DCDD9 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
 		4069ACC4B1B0DD54C9682123 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5183450ADA4538DED72B8404 /* FinScopeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinScopeApp.swift; sourceTree = "<group>"; };
 		58BD64C992BBA90F23B438AF /* FinScope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinScope.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,7 +238,6 @@
 			children = (
 				5183450ADA4538DED72B8404 /* FinScopeApp.swift */,
 				4069ACC4B1B0DD54C9682123 /* Assets.xcassets */,
-				2F88FD64600D4498217DCDD9 /* Preview Content */,
 				5AB154CE2F3E80CC00412C7D /* AppState */,
 				5AB154BC2F3E807500412C7D /* UI */,
 			);
@@ -366,7 +363,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3D0FCF12D178AF59793148F /* Assets.xcassets in Resources */,
-				8B9999B1C8B047511F1998E8 /* Preview Content in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
