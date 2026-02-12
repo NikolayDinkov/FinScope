@@ -8,7 +8,7 @@ struct DashboardCoordinatorView: View {
             Text("Dashboard")
                 .font(.largeTitle)
                 .navigationTitle("Dashboard")
-                .navigationDestination(for: NavigationDestination.self) { $0 }
+                .navigationDestination(for: NavigationDestination.self) { _ in Text("Not implemented") }
         }
     }
 }

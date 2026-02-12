@@ -29,6 +29,80 @@
 		F00000000000000000BB000C /* InvestmentsCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000C /* InvestmentsCoordinatorView.swift */; };
 		F00000000000000000BB000E /* ForecastCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000E /* ForecastCoordinator.swift */; };
 		F00000000000000000BB000F /* ForecastCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000F /* ForecastCoordinatorView.swift */; };
+		E20000000000000000BB1001 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1001 /* CoreDataStack.swift */; };
+		E20000000000000000BB1002 /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1002 /* Decimal+Extensions.swift */; };
+		E20000000000000000BB1003 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1003 /* Date+Extensions.swift */; };
+		E20000000000000000BB1004 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1004 /* CSVParser.swift */; };
+		E20000000000000000BB1005 /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1005 /* CurrencyConverter.swift */; };
+		E20000000000000000BB2001 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2001 /* Account.swift */; };
+		E20000000000000000BB2002 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2002 /* Transaction.swift */; };
+		E20000000000000000BB2003 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2003 /* Category.swift */; };
+		E20000000000000000BB2004 /* Subcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2004 /* Subcategory.swift */; };
+		E20000000000000000BB2005 /* RecurrenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2005 /* RecurrenceRule.swift */; };
+		E20000000000000000BB2101 /* AccountRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2101 /* AccountRepositoryProtocol.swift */; };
+		E20000000000000000BB2102 /* TransactionRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2102 /* TransactionRepositoryProtocol.swift */; };
+		E20000000000000000BB2103 /* CategoryRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2103 /* CategoryRepositoryProtocol.swift */; };
+		E20000000000000000BB2104 /* SubcategoryRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2104 /* SubcategoryRepositoryProtocol.swift */; };
+		E20000000000000000BB2201 /* FetchAccountsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2201 /* FetchAccountsUseCase.swift */; };
+		E20000000000000000BB2202 /* FetchAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2202 /* FetchAccountUseCase.swift */; };
+		E20000000000000000BB2203 /* CreateAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2203 /* CreateAccountUseCase.swift */; };
+		E20000000000000000BB2204 /* UpdateAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2204 /* UpdateAccountUseCase.swift */; };
+		E20000000000000000BB2205 /* DeleteAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2205 /* DeleteAccountUseCase.swift */; };
+		E20000000000000000BB2301 /* FetchTransactionsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2301 /* FetchTransactionsUseCase.swift */; };
+		E20000000000000000BB2302 /* AddTransactionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2302 /* AddTransactionUseCase.swift */; };
+		E20000000000000000BB2303 /* UpdateTransactionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2303 /* UpdateTransactionUseCase.swift */; };
+		E20000000000000000BB2304 /* DeleteTransactionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2304 /* DeleteTransactionUseCase.swift */; };
+		E20000000000000000BB2305 /* ImportTransactionsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2305 /* ImportTransactionsUseCase.swift */; };
+		E20000000000000000BB2306 /* ExportTransactionsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2306 /* ExportTransactionsUseCase.swift */; };
+		E20000000000000000BB2401 /* FetchCategoriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2401 /* FetchCategoriesUseCase.swift */; };
+		E20000000000000000BB2402 /* CreateCategoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2402 /* CreateCategoryUseCase.swift */; };
+		E20000000000000000BB2403 /* SeedDefaultCategoriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2403 /* SeedDefaultCategoriesUseCase.swift */; };
+		E20000000000000000BB3001 /* AccountMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3001 /* AccountMO.swift */; };
+		E20000000000000000BB3002 /* TransactionMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3002 /* TransactionMO.swift */; };
+		E20000000000000000BB3003 /* CategoryMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3003 /* CategoryMO.swift */; };
+		E20000000000000000BB3004 /* SubcategoryMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3004 /* SubcategoryMO.swift */; };
+		E20000000000000000BB3101 /* AccountMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3101 /* AccountMapper.swift */; };
+		E20000000000000000BB3102 /* TransactionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3102 /* TransactionMapper.swift */; };
+		E20000000000000000BB3103 /* CategoryMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3103 /* CategoryMapper.swift */; };
+		E20000000000000000BB3104 /* SubcategoryMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3104 /* SubcategoryMapper.swift */; };
+		E20000000000000000BB3201 /* CoreDataAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3201 /* CoreDataAccountRepository.swift */; };
+		E20000000000000000BB3202 /* CoreDataTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3202 /* CoreDataTransactionRepository.swift */; };
+		E20000000000000000BB3203 /* CoreDataCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3203 /* CoreDataCategoryRepository.swift */; };
+		E20000000000000000BB3204 /* CoreDataSubcategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3204 /* CoreDataSubcategoryRepository.swift */; };
+		E20000000000000000BB3301 /* DefaultCategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3301 /* DefaultCategoryData.swift */; };
+		E20000000000000000BB4001 /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4001 /* AccountListViewModel.swift */; };
+		E20000000000000000BB4002 /* AccountListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4002 /* AccountListView.swift */; };
+		E20000000000000000BB4003 /* AccountDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4003 /* AccountDetailViewModel.swift */; };
+		E20000000000000000BB4004 /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4004 /* AccountDetailView.swift */; };
+		E20000000000000000BB4005 /* AccountFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4005 /* AccountFormViewModel.swift */; };
+		E20000000000000000BB4006 /* AccountFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4006 /* AccountFormView.swift */; };
+		E20000000000000000BB4101 /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4101 /* TransactionRowView.swift */; };
+		E20000000000000000BB4102 /* TransactionFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4102 /* TransactionFormViewModel.swift */; };
+		E20000000000000000BB4103 /* TransactionFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4103 /* TransactionFormView.swift */; };
+		E20000000000000000BB4104 /* CSVImportExportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4104 /* CSVImportExportViewModel.swift */; };
+		E20000000000000000BB4105 /* CSVImportExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4105 /* CSVImportExportView.swift */; };
+		E20000000000000000BB4201 /* CategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4201 /* CategoryListViewModel.swift */; };
+		E20000000000000000BB4202 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4202 /* CategoryListView.swift */; };
+		E20000000000000000BB4203 /* CategoryFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4203 /* CategoryFormView.swift */; };
+		E20000000000000000BB5001 /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA5001 /* CompositionRoot.swift */; };
+		E20000000000000000BB9001 /* FinScope.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA9001 /* FinScope.xcdatamodeld */; };
+		E20000000000000000BB6001 /* MockAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6001 /* MockAccountRepository.swift */; };
+		E20000000000000000BB6002 /* MockTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6002 /* MockTransactionRepository.swift */; };
+		E20000000000000000BB6003 /* MockCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6003 /* MockCategoryRepository.swift */; };
+		E20000000000000000BB6004 /* MockSubcategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6004 /* MockSubcategoryRepository.swift */; };
+		E20000000000000000BB6101 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6101 /* AccountTests.swift */; };
+		E20000000000000000BB6102 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6102 /* TransactionTests.swift */; };
+		E20000000000000000BB6103 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6103 /* CategoryTests.swift */; };
+		E20000000000000000BB6201 /* FetchAccountsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6201 /* FetchAccountsUseCaseTests.swift */; };
+		E20000000000000000BB6202 /* CreateAccountUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6202 /* CreateAccountUseCaseTests.swift */; };
+		E20000000000000000BB6203 /* DeleteAccountUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6203 /* DeleteAccountUseCaseTests.swift */; };
+		E20000000000000000BB6204 /* AddTransactionUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6204 /* AddTransactionUseCaseTests.swift */; };
+		E20000000000000000BB6205 /* DeleteTransactionUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6205 /* DeleteTransactionUseCaseTests.swift */; };
+		E20000000000000000BB6206 /* ImportTransactionsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6206 /* ImportTransactionsUseCaseTests.swift */; };
+		E20000000000000000BB6207 /* ExportTransactionsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6207 /* ExportTransactionsUseCaseTests.swift */; };
+		E20000000000000000BB6301 /* AccountMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6301 /* AccountMapperTests.swift */; };
+		E20000000000000000BB6302 /* TransactionMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6302 /* TransactionMapperTests.swift */; };
+		E20000000000000000BB6401 /* CSVParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6401 /* CSVParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +148,80 @@
 		F00000000000000000AA000C /* InvestmentsCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsCoordinatorView.swift; sourceTree = "<group>"; };
 		F00000000000000000AA000E /* ForecastCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCoordinator.swift; sourceTree = "<group>"; };
 		F00000000000000000AA000F /* ForecastCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCoordinatorView.swift; sourceTree = "<group>"; };
+		E10000000000000000AA1001 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		E10000000000000000AA1002 /* Decimal+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extensions.swift"; sourceTree = "<group>"; };
+		E10000000000000000AA1003 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		E10000000000000000AA1004 /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
+		E10000000000000000AA1005 /* CurrencyConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2001 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2002 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2003 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2004 /* Subcategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subcategory.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2005 /* RecurrenceRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceRule.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2101 /* AccountRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepositoryProtocol.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2102 /* TransactionRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepositoryProtocol.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2103 /* CategoryRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepositoryProtocol.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2104 /* SubcategoryRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryRepositoryProtocol.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2201 /* FetchAccountsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccountsUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2202 /* FetchAccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccountUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2203 /* CreateAccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2204 /* UpdateAccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2205 /* DeleteAccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2301 /* FetchTransactionsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTransactionsUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2302 /* AddTransactionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2303 /* UpdateTransactionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTransactionUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2304 /* DeleteTransactionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTransactionUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2305 /* ImportTransactionsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTransactionsUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2306 /* ExportTransactionsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportTransactionsUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2401 /* FetchCategoriesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCategoriesUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2402 /* CreateCategoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2403 /* SeedDefaultCategoriesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDefaultCategoriesUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3001 /* AccountMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMO.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3002 /* TransactionMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMO.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3003 /* CategoryMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMO.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3004 /* SubcategoryMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryMO.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3101 /* AccountMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMapper.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3102 /* TransactionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMapper.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3103 /* CategoryMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMapper.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3104 /* SubcategoryMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryMapper.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3201 /* CoreDataAccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAccountRepository.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3202 /* CoreDataTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTransactionRepository.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3203 /* CoreDataCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCategoryRepository.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3204 /* CoreDataSubcategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSubcategoryRepository.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3301 /* DefaultCategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCategoryData.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4001 /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4002 /* AccountListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListView.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4003 /* AccountDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4004 /* AccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4005 /* AccountFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFormViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4006 /* AccountFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFormView.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4101 /* TransactionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4102 /* TransactionFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFormViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4103 /* TransactionFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFormView.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4104 /* CSVImportExportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVImportExportViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4105 /* CSVImportExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVImportExportView.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4201 /* CategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4202 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4203 /* CategoryFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFormView.swift; sourceTree = "<group>"; };
+		E10000000000000000AA5001 /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
+		E10000000000000000AA9001 /* FinScope.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodeld; path = FinScope.xcdatamodeld; sourceTree = "<group>"; };
+		E10000000000000000AA6001 /* MockAccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAccountRepository.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6002 /* MockTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionRepository.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6003 /* MockCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCategoryRepository.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6004 /* MockSubcategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSubcategoryRepository.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6101 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6102 /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6103 /* CategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6201 /* FetchAccountsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccountsUseCaseTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6202 /* CreateAccountUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountUseCaseTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6203 /* DeleteAccountUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountUseCaseTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6204 /* AddTransactionUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionUseCaseTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6205 /* DeleteTransactionUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTransactionUseCaseTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6206 /* ImportTransactionsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTransactionsUseCaseTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6207 /* ExportTransactionsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportTransactionsUseCaseTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6301 /* AccountMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMapperTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6302 /* TransactionMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMapperTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA6401 /* CSVParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +332,9 @@
 			isa = PBXGroup;
 			children = (
 				DB75E3F53CBA8D035EC5C697 /* FinScopeTests.swift */,
+				E30000000000000000CC6001 /* Mocks */,
+				E30000000000000000CC6002 /* Domain */,
+				E30000000000000000CC6005 /* Data */,
 			);
 			path = FinScopeTests;
 			sourceTree = "<group>";
@@ -238,10 +389,313 @@
 			children = (
 				5183450ADA4538DED72B8404 /* FinScopeApp.swift */,
 				4069ACC4B1B0DD54C9682123 /* Assets.xcassets */,
+				E10000000000000000AA9001 /* FinScope.xcdatamodeld */,
+				E30000000000000000CC5001 /* App */,
 				5AB154CE2F3E80CC00412C7D /* AppState */,
+				E30000000000000000CC1001 /* Core */,
+				E30000000000000000CC2001 /* Domain */,
+				E30000000000000000CC3001 /* Data */,
+				E30000000000000000CC4001 /* Presentation */,
 				5AB154BC2F3E807500412C7D /* UI */,
 			);
 			path = FinScope;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC5001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA5001 /* CompositionRoot.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC1001 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E30000000000000000CC1002 /* Persistence */,
+				E30000000000000000CC1003 /* Extensions */,
+				E30000000000000000CC1004 /* Utilities */,
+				E30000000000000000CC1005 /* Networking */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC1002 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA1001 /* CoreDataStack.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC1003 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA1002 /* Decimal+Extensions.swift */,
+				E10000000000000000AA1003 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC1004 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA1004 /* CSVParser.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC1005 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA1005 /* CurrencyConverter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC2001 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E30000000000000000CC2002 /* Entities */,
+				E30000000000000000CC2003 /* Repositories */,
+				E30000000000000000CC2004 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC2002 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA2001 /* Account.swift */,
+				E10000000000000000AA2002 /* Transaction.swift */,
+				E10000000000000000AA2003 /* Category.swift */,
+				E10000000000000000AA2004 /* Subcategory.swift */,
+				E10000000000000000AA2005 /* RecurrenceRule.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC2003 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA2101 /* AccountRepositoryProtocol.swift */,
+				E10000000000000000AA2102 /* TransactionRepositoryProtocol.swift */,
+				E10000000000000000AA2103 /* CategoryRepositoryProtocol.swift */,
+				E10000000000000000AA2104 /* SubcategoryRepositoryProtocol.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC2004 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E30000000000000000CC2005 /* Account */,
+				E30000000000000000CC2006 /* Transaction */,
+				E30000000000000000CC2007 /* Category */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC2005 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA2201 /* FetchAccountsUseCase.swift */,
+				E10000000000000000AA2202 /* FetchAccountUseCase.swift */,
+				E10000000000000000AA2203 /* CreateAccountUseCase.swift */,
+				E10000000000000000AA2204 /* UpdateAccountUseCase.swift */,
+				E10000000000000000AA2205 /* DeleteAccountUseCase.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC2006 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA2301 /* FetchTransactionsUseCase.swift */,
+				E10000000000000000AA2302 /* AddTransactionUseCase.swift */,
+				E10000000000000000AA2303 /* UpdateTransactionUseCase.swift */,
+				E10000000000000000AA2304 /* DeleteTransactionUseCase.swift */,
+				E10000000000000000AA2305 /* ImportTransactionsUseCase.swift */,
+				E10000000000000000AA2306 /* ExportTransactionsUseCase.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC2007 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA2401 /* FetchCategoriesUseCase.swift */,
+				E10000000000000000AA2402 /* CreateCategoryUseCase.swift */,
+				E10000000000000000AA2403 /* SeedDefaultCategoriesUseCase.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC3001 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E30000000000000000CC3002 /* ManagedObjects */,
+				E30000000000000000CC3003 /* Mappers */,
+				E30000000000000000CC3004 /* Repositories */,
+				E30000000000000000CC3005 /* Seeds */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC3002 /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA3001 /* AccountMO.swift */,
+				E10000000000000000AA3002 /* TransactionMO.swift */,
+				E10000000000000000AA3003 /* CategoryMO.swift */,
+				E10000000000000000AA3004 /* SubcategoryMO.swift */,
+			);
+			path = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC3003 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA3101 /* AccountMapper.swift */,
+				E10000000000000000AA3102 /* TransactionMapper.swift */,
+				E10000000000000000AA3103 /* CategoryMapper.swift */,
+				E10000000000000000AA3104 /* SubcategoryMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC3004 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA3201 /* CoreDataAccountRepository.swift */,
+				E10000000000000000AA3202 /* CoreDataTransactionRepository.swift */,
+				E10000000000000000AA3203 /* CoreDataCategoryRepository.swift */,
+				E10000000000000000AA3204 /* CoreDataSubcategoryRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC3005 /* Seeds */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA3301 /* DefaultCategoryData.swift */,
+			);
+			path = Seeds;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC4001 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E30000000000000000CC4002 /* Accounts */,
+				E30000000000000000CC4003 /* Transactions */,
+				E30000000000000000CC4004 /* Categories */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC4002 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA4001 /* AccountListViewModel.swift */,
+				E10000000000000000AA4002 /* AccountListView.swift */,
+				E10000000000000000AA4003 /* AccountDetailViewModel.swift */,
+				E10000000000000000AA4004 /* AccountDetailView.swift */,
+				E10000000000000000AA4005 /* AccountFormViewModel.swift */,
+				E10000000000000000AA4006 /* AccountFormView.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC4003 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA4101 /* TransactionRowView.swift */,
+				E10000000000000000AA4102 /* TransactionFormViewModel.swift */,
+				E10000000000000000AA4103 /* TransactionFormView.swift */,
+				E10000000000000000AA4104 /* CSVImportExportViewModel.swift */,
+				E10000000000000000AA4105 /* CSVImportExportView.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC4004 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA4201 /* CategoryListViewModel.swift */,
+				E10000000000000000AA4202 /* CategoryListView.swift */,
+				E10000000000000000AA4203 /* CategoryFormView.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC6001 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA6001 /* MockAccountRepository.swift */,
+				E10000000000000000AA6002 /* MockTransactionRepository.swift */,
+				E10000000000000000AA6003 /* MockCategoryRepository.swift */,
+				E10000000000000000AA6004 /* MockSubcategoryRepository.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC6002 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E30000000000000000CC6003 /* Entities */,
+				E30000000000000000CC6004 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC6003 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA6101 /* AccountTests.swift */,
+				E10000000000000000AA6102 /* TransactionTests.swift */,
+				E10000000000000000AA6103 /* CategoryTests.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC6004 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA6201 /* FetchAccountsUseCaseTests.swift */,
+				E10000000000000000AA6202 /* CreateAccountUseCaseTests.swift */,
+				E10000000000000000AA6203 /* DeleteAccountUseCaseTests.swift */,
+				E10000000000000000AA6204 /* AddTransactionUseCaseTests.swift */,
+				E10000000000000000AA6205 /* DeleteTransactionUseCaseTests.swift */,
+				E10000000000000000AA6206 /* ImportTransactionsUseCaseTests.swift */,
+				E10000000000000000AA6207 /* ExportTransactionsUseCaseTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC6005 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E30000000000000000CC6006 /* Mappers */,
+				E30000000000000000CC6007 /* Services */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC6006 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA6301 /* AccountMapperTests.swift */,
+				E10000000000000000AA6302 /* TransactionMapperTests.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC6007 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA6401 /* CSVParserTests.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +837,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED71D6C7DEDA9961826CA09F /* FinScopeTests.swift in Sources */,
+				E20000000000000000BB6001 /* MockAccountRepository.swift in Sources */,
+				E20000000000000000BB6002 /* MockTransactionRepository.swift in Sources */,
+				E20000000000000000BB6003 /* MockCategoryRepository.swift in Sources */,
+				E20000000000000000BB6004 /* MockSubcategoryRepository.swift in Sources */,
+				E20000000000000000BB6101 /* AccountTests.swift in Sources */,
+				E20000000000000000BB6102 /* TransactionTests.swift in Sources */,
+				E20000000000000000BB6103 /* CategoryTests.swift in Sources */,
+				E20000000000000000BB6201 /* FetchAccountsUseCaseTests.swift in Sources */,
+				E20000000000000000BB6202 /* CreateAccountUseCaseTests.swift in Sources */,
+				E20000000000000000BB6203 /* DeleteAccountUseCaseTests.swift in Sources */,
+				E20000000000000000BB6204 /* AddTransactionUseCaseTests.swift in Sources */,
+				E20000000000000000BB6205 /* DeleteTransactionUseCaseTests.swift in Sources */,
+				E20000000000000000BB6206 /* ImportTransactionsUseCaseTests.swift in Sources */,
+				E20000000000000000BB6207 /* ExportTransactionsUseCaseTests.swift in Sources */,
+				E20000000000000000BB6301 /* AccountMapperTests.swift in Sources */,
+				E20000000000000000BB6302 /* TransactionMapperTests.swift in Sources */,
+				E20000000000000000BB6401 /* CSVParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +879,63 @@
 				F00000000000000000BB000C /* InvestmentsCoordinatorView.swift in Sources */,
 				F00000000000000000BB000E /* ForecastCoordinator.swift in Sources */,
 				F00000000000000000BB000F /* ForecastCoordinatorView.swift in Sources */,
+				E20000000000000000BB1001 /* CoreDataStack.swift in Sources */,
+				E20000000000000000BB1002 /* Decimal+Extensions.swift in Sources */,
+				E20000000000000000BB1003 /* Date+Extensions.swift in Sources */,
+				E20000000000000000BB1004 /* CSVParser.swift in Sources */,
+				E20000000000000000BB1005 /* CurrencyConverter.swift in Sources */,
+				E20000000000000000BB2001 /* Account.swift in Sources */,
+				E20000000000000000BB2002 /* Transaction.swift in Sources */,
+				E20000000000000000BB2003 /* Category.swift in Sources */,
+				E20000000000000000BB2004 /* Subcategory.swift in Sources */,
+				E20000000000000000BB2005 /* RecurrenceRule.swift in Sources */,
+				E20000000000000000BB2101 /* AccountRepositoryProtocol.swift in Sources */,
+				E20000000000000000BB2102 /* TransactionRepositoryProtocol.swift in Sources */,
+				E20000000000000000BB2103 /* CategoryRepositoryProtocol.swift in Sources */,
+				E20000000000000000BB2104 /* SubcategoryRepositoryProtocol.swift in Sources */,
+				E20000000000000000BB2201 /* FetchAccountsUseCase.swift in Sources */,
+				E20000000000000000BB2202 /* FetchAccountUseCase.swift in Sources */,
+				E20000000000000000BB2203 /* CreateAccountUseCase.swift in Sources */,
+				E20000000000000000BB2204 /* UpdateAccountUseCase.swift in Sources */,
+				E20000000000000000BB2205 /* DeleteAccountUseCase.swift in Sources */,
+				E20000000000000000BB2301 /* FetchTransactionsUseCase.swift in Sources */,
+				E20000000000000000BB2302 /* AddTransactionUseCase.swift in Sources */,
+				E20000000000000000BB2303 /* UpdateTransactionUseCase.swift in Sources */,
+				E20000000000000000BB2304 /* DeleteTransactionUseCase.swift in Sources */,
+				E20000000000000000BB2305 /* ImportTransactionsUseCase.swift in Sources */,
+				E20000000000000000BB2306 /* ExportTransactionsUseCase.swift in Sources */,
+				E20000000000000000BB2401 /* FetchCategoriesUseCase.swift in Sources */,
+				E20000000000000000BB2402 /* CreateCategoryUseCase.swift in Sources */,
+				E20000000000000000BB2403 /* SeedDefaultCategoriesUseCase.swift in Sources */,
+				E20000000000000000BB3001 /* AccountMO.swift in Sources */,
+				E20000000000000000BB3002 /* TransactionMO.swift in Sources */,
+				E20000000000000000BB3003 /* CategoryMO.swift in Sources */,
+				E20000000000000000BB3004 /* SubcategoryMO.swift in Sources */,
+				E20000000000000000BB3101 /* AccountMapper.swift in Sources */,
+				E20000000000000000BB3102 /* TransactionMapper.swift in Sources */,
+				E20000000000000000BB3103 /* CategoryMapper.swift in Sources */,
+				E20000000000000000BB3104 /* SubcategoryMapper.swift in Sources */,
+				E20000000000000000BB3201 /* CoreDataAccountRepository.swift in Sources */,
+				E20000000000000000BB3202 /* CoreDataTransactionRepository.swift in Sources */,
+				E20000000000000000BB3203 /* CoreDataCategoryRepository.swift in Sources */,
+				E20000000000000000BB3204 /* CoreDataSubcategoryRepository.swift in Sources */,
+				E20000000000000000BB3301 /* DefaultCategoryData.swift in Sources */,
+				E20000000000000000BB4001 /* AccountListViewModel.swift in Sources */,
+				E20000000000000000BB4002 /* AccountListView.swift in Sources */,
+				E20000000000000000BB4003 /* AccountDetailViewModel.swift in Sources */,
+				E20000000000000000BB4004 /* AccountDetailView.swift in Sources */,
+				E20000000000000000BB4005 /* AccountFormViewModel.swift in Sources */,
+				E20000000000000000BB4006 /* AccountFormView.swift in Sources */,
+				E20000000000000000BB4101 /* TransactionRowView.swift in Sources */,
+				E20000000000000000BB4102 /* TransactionFormViewModel.swift in Sources */,
+				E20000000000000000BB4103 /* TransactionFormView.swift in Sources */,
+				E20000000000000000BB4104 /* CSVImportExportViewModel.swift in Sources */,
+				E20000000000000000BB4105 /* CSVImportExportView.swift in Sources */,
+				E20000000000000000BB4201 /* CategoryListViewModel.swift in Sources */,
+				E20000000000000000BB4202 /* CategoryListView.swift in Sources */,
+				E20000000000000000BB4203 /* CategoryFormView.swift in Sources */,
+				E20000000000000000BB5001 /* CompositionRoot.swift in Sources */,
+				E20000000000000000BB9001 /* FinScope.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

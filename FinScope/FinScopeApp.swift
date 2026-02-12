@@ -7,6 +7,9 @@ struct FinScopeApp: App {
     var body: some Scene {
         WindowGroup {
             appCoordinator.start()
+                .task {
+                    await CompositionRoot.shared.seedDefaultCategories()
+                }
         }
     }
 }

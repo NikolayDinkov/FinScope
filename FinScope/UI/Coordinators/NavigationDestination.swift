@@ -1,12 +1,15 @@
-import SwiftUI
+import Foundation
 
-enum NavigationDestination {
-
+enum NavigationDestination: Hashable {
     // Dashboard
     case dashboardDetail
 
     // Accounts
-    case accountDetail
+    case accountDetail(accountId: UUID)
+    case accountForm(accountId: UUID?)
+    case transactionForm(accountId: UUID, transactionId: UUID?)
+    case csvImportExport(accountId: UUID)
+    case categoryManagement
 
     // Budget
     case budgetDetail
@@ -16,44 +19,4 @@ enum NavigationDestination {
 
     // Forecast
     case forecastDetail
-}
-
-extension NavigationDestination: Hashable {
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(hashValue)
-    }
-
-    static func == (lhs: NavigationDestination, rhs: NavigationDestination) -> Bool {
-        switch (lhs, rhs) {
-        case (.dashboardDetail, .dashboardDetail):
-            true
-        case (.accountDetail, .accountDetail):
-            true
-        case (.budgetDetail, .budgetDetail):
-            true
-        case (.investmentDetail, .investmentDetail):
-            true
-        case (.forecastDetail, .forecastDetail):
-            true
-        default:
-            false
-        }
-    }
-}
-
-extension NavigationDestination: View {
-    var body: some View {
-        switch self {
-        case .dashboardDetail:
-            Text("Dashboard Detail")
-        case .accountDetail:
-            Text("Account Detail")
-        case .budgetDetail:
-            Text("Budget Detail")
-        case .investmentDetail:
-            Text("Investment Detail")
-        case .forecastDetail:
-            Text("Forecast Detail")
-        }
-    }
 }

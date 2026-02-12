@@ -8,7 +8,7 @@ struct ForecastCoordinatorView: View {
             Text("Forecast")
                 .font(.largeTitle)
                 .navigationTitle("Forecast")
-                .navigationDestination(for: NavigationDestination.self) { $0 }
+                .navigationDestination(for: NavigationDestination.self) { _ in Text("Not implemented") }
         }
     }
 }

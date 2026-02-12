@@ -8,7 +8,7 @@ struct InvestmentsCoordinatorView: View {
             Text("Investments")
                 .font(.largeTitle)
                 .navigationTitle("Investments")
-                .navigationDestination(for: NavigationDestination.self) { $0 }
+                .navigationDestination(for: NavigationDestination.self) { _ in Text("Not implemented") }
         }
     }
 }
