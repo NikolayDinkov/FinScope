@@ -1,8 +1,10 @@
-import XCTest
+import Testing
 @testable import FinScope
 
-final class FinScopeTests: XCTestCase {
-    func testExample() throws {
-        XCTAssertTrue(true)
+struct FinScopeTests {
+
+    @Test func example() async throws {
+        #expect(true)
     }
+
 }
