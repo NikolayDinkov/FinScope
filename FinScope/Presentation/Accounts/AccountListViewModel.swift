@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 @MainActor @Observable
 final class AccountListViewModel {
@@ -11,6 +12,7 @@ final class AccountListViewModel {
 
     private let fetchAccountsUseCase: FetchAccountsUseCase
     private let deleteAccountUseCase: DeleteAccountUseCase
+    private var cancellables = Set<AnyCancellable>()
 
     init(
         fetchAccountsUseCase: FetchAccountsUseCase,
@@ -18,6 +20,14 @@ final class AccountListViewModel {
     ) {
         self.fetchAccountsUseCase = fetchAccountsUseCase
         self.deleteAccountUseCase = deleteAccountUseCase
+
+        NotificationCenter.default.publisher(for: .accountsDidChange)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self else { return }
+                Task { await self.loadAccounts() }
+            }
+            .store(in: &cancellables)
     }
 
     var groupedAccounts: [(AccountType, [Account])] {

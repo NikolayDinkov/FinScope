@@ -5,7 +5,7 @@ struct AccountsCoordinatorView: View {
 
     var body: some View {
         NavigationStack(path: $coordinator.path) {
-            AccountListView(viewModel: coordinator.makeAccountListViewModel())
+            AccountListView(viewModel: coordinator.accountListViewModel)
                 .navigationDestination(for: NavigationDestination.self) { destination in
                     switch destination {
                     case .accountDetail(let accountId):

@@ -31,6 +31,7 @@ final class CoreDataAccountRepository: AccountRepositoryProtocol, @unchecked Sen
             _ = AccountMapper.toManagedObject(account, context: self.context)
             try self.context.save()
         }
+        NotificationCenter.default.post(name: .accountsDidChange, object: nil)
     }
 
     func update(_ account: Account) async throws {
@@ -42,6 +43,7 @@ final class CoreDataAccountRepository: AccountRepositoryProtocol, @unchecked Sen
             AccountMapper.update(mo, from: account)
             try self.context.save()
         }
+        NotificationCenter.default.post(name: .accountsDidChange, object: nil)
     }
 
     func delete(_ id: UUID) async throws {
@@ -53,6 +55,7 @@ final class CoreDataAccountRepository: AccountRepositoryProtocol, @unchecked Sen
             self.context.delete(mo)
             try self.context.save()
         }
+        NotificationCenter.default.post(name: .accountsDidChange, object: nil)
     }
 
     func hasTransactions(_ accountId: UUID) async throws -> Bool {

@@ -16,21 +16,9 @@
 		5AB154CF2F3E80CC00412C7D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB154CD2F3E80CC00412C7D /* AppState.swift */; };
 		C9ACD8A46690C2A85410AA1C /* FinScopeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A156935D480CB151D934E7A /* FinScopeUITests.swift */; };
 		D3D0FCF12D178AF59793148F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4069ACC4B1B0DD54C9682123 /* Assets.xcassets */; };
-		ED71D6C7DEDA9961826CA09F /* FinScopeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E3F53CBA8D035EC5C697 /* FinScopeTests.swift */; };
-		F00000000000000000BB0001 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0001 /* Coordinator.swift */; };
-		F00000000000000000BB0002 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0002 /* DashboardCoordinator.swift */; };
-		F00000000000000000BB0003 /* DashboardCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0003 /* DashboardCoordinatorView.swift */; };
-		F00000000000000000BB0004 /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0004 /* NavigationDestination.swift */; };
-		F00000000000000000BB0005 /* AccountsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0005 /* AccountsCoordinator.swift */; };
-		F00000000000000000BB0006 /* AccountsCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0006 /* AccountsCoordinatorView.swift */; };
-		F00000000000000000BB0008 /* BudgetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0008 /* BudgetCoordinator.swift */; };
-		F00000000000000000BB0009 /* BudgetCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0009 /* BudgetCoordinatorView.swift */; };
-		F00000000000000000BB000B /* InvestmentsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000B /* InvestmentsCoordinator.swift */; };
-		F00000000000000000BB000C /* InvestmentsCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000C /* InvestmentsCoordinatorView.swift */; };
-		F00000000000000000BB000E /* ForecastCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000E /* ForecastCoordinator.swift */; };
-		F00000000000000000BB000F /* ForecastCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000F /* ForecastCoordinatorView.swift */; };
 		E20000000000000000BB1001 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1001 /* CoreDataStack.swift */; };
 		E20000000000000000BB1002 /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1002 /* Decimal+Extensions.swift */; };
+		E20000000000000000BB1006 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1006 /* Notification+Extensions.swift */; };
 		E20000000000000000BB1003 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1003 /* Date+Extensions.swift */; };
 		E20000000000000000BB1004 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1004 /* CSVParser.swift */; };
 		E20000000000000000BB1005 /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1005 /* CurrencyConverter.swift */; };
@@ -85,7 +73,6 @@
 		E20000000000000000BB4202 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4202 /* CategoryListView.swift */; };
 		E20000000000000000BB4203 /* CategoryFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4203 /* CategoryFormView.swift */; };
 		E20000000000000000BB5001 /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA5001 /* CompositionRoot.swift */; };
-		E20000000000000000BB9001 /* FinScope.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA9001 /* FinScope.xcdatamodeld */; };
 		E20000000000000000BB6001 /* MockAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6001 /* MockAccountRepository.swift */; };
 		E20000000000000000BB6002 /* MockTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6002 /* MockTransactionRepository.swift */; };
 		E20000000000000000BB6003 /* MockCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6003 /* MockCategoryRepository.swift */; };
@@ -103,6 +90,20 @@
 		E20000000000000000BB6301 /* AccountMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6301 /* AccountMapperTests.swift */; };
 		E20000000000000000BB6302 /* TransactionMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6302 /* TransactionMapperTests.swift */; };
 		E20000000000000000BB6401 /* CSVParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6401 /* CSVParserTests.swift */; };
+		E20000000000000000BB9001 /* FinScope.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA9001 /* FinScope.xcdatamodeld */; };
+		ED71D6C7DEDA9961826CA09F /* FinScopeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E3F53CBA8D035EC5C697 /* FinScopeTests.swift */; };
+		F00000000000000000BB0001 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0001 /* Coordinator.swift */; };
+		F00000000000000000BB0002 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0002 /* DashboardCoordinator.swift */; };
+		F00000000000000000BB0003 /* DashboardCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0003 /* DashboardCoordinatorView.swift */; };
+		F00000000000000000BB0004 /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0004 /* NavigationDestination.swift */; };
+		F00000000000000000BB0005 /* AccountsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0005 /* AccountsCoordinator.swift */; };
+		F00000000000000000BB0006 /* AccountsCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0006 /* AccountsCoordinatorView.swift */; };
+		F00000000000000000BB0008 /* BudgetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0008 /* BudgetCoordinator.swift */; };
+		F00000000000000000BB0009 /* BudgetCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0009 /* BudgetCoordinatorView.swift */; };
+		F00000000000000000BB000B /* InvestmentsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000B /* InvestmentsCoordinator.swift */; };
+		F00000000000000000BB000C /* InvestmentsCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000C /* InvestmentsCoordinatorView.swift */; };
+		F00000000000000000BB000E /* ForecastCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000E /* ForecastCoordinator.swift */; };
+		F00000000000000000BB000F /* ForecastCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000F /* ForecastCoordinatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,20 +137,9 @@
 		777FCDC88C8250551FC8552A /* FinScopeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinScopeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A156935D480CB151D934E7A /* FinScopeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinScopeUITests.swift; sourceTree = "<group>"; };
 		DB75E3F53CBA8D035EC5C697 /* FinScopeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinScopeTests.swift; sourceTree = "<group>"; };
-		F00000000000000000AA0001 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		F00000000000000000AA0002 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
-		F00000000000000000AA0003 /* DashboardCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinatorView.swift; sourceTree = "<group>"; };
-		F00000000000000000AA0004 /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
-		F00000000000000000AA0005 /* AccountsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsCoordinator.swift; sourceTree = "<group>"; };
-		F00000000000000000AA0006 /* AccountsCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsCoordinatorView.swift; sourceTree = "<group>"; };
-		F00000000000000000AA0008 /* BudgetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCoordinator.swift; sourceTree = "<group>"; };
-		F00000000000000000AA0009 /* BudgetCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCoordinatorView.swift; sourceTree = "<group>"; };
-		F00000000000000000AA000B /* InvestmentsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsCoordinator.swift; sourceTree = "<group>"; };
-		F00000000000000000AA000C /* InvestmentsCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsCoordinatorView.swift; sourceTree = "<group>"; };
-		F00000000000000000AA000E /* ForecastCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCoordinator.swift; sourceTree = "<group>"; };
-		F00000000000000000AA000F /* ForecastCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCoordinatorView.swift; sourceTree = "<group>"; };
 		E10000000000000000AA1001 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		E10000000000000000AA1002 /* Decimal+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extensions.swift"; sourceTree = "<group>"; };
+		E10000000000000000AA1006 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
 		E10000000000000000AA1003 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E10000000000000000AA1004 /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
 		E10000000000000000AA1005 /* CurrencyConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
@@ -204,7 +194,6 @@
 		E10000000000000000AA4202 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
 		E10000000000000000AA4203 /* CategoryFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFormView.swift; sourceTree = "<group>"; };
 		E10000000000000000AA5001 /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
-		E10000000000000000AA9001 /* FinScope.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodeld; path = FinScope.xcdatamodeld; sourceTree = "<group>"; };
 		E10000000000000000AA6001 /* MockAccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAccountRepository.swift; sourceTree = "<group>"; };
 		E10000000000000000AA6002 /* MockTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionRepository.swift; sourceTree = "<group>"; };
 		E10000000000000000AA6003 /* MockCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCategoryRepository.swift; sourceTree = "<group>"; };
@@ -222,6 +211,19 @@
 		E10000000000000000AA6301 /* AccountMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMapperTests.swift; sourceTree = "<group>"; };
 		E10000000000000000AA6302 /* TransactionMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMapperTests.swift; sourceTree = "<group>"; };
 		E10000000000000000AA6401 /* CSVParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParserTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA9001 /* FinScope.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodeld; path = FinScope.xcdatamodeld; sourceTree = "<group>"; };
+		F00000000000000000AA0001 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F00000000000000000AA0002 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
+		F00000000000000000AA0003 /* DashboardCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinatorView.swift; sourceTree = "<group>"; };
+		F00000000000000000AA0004 /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
+		F00000000000000000AA0005 /* AccountsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsCoordinator.swift; sourceTree = "<group>"; };
+		F00000000000000000AA0006 /* AccountsCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsCoordinatorView.swift; sourceTree = "<group>"; };
+		F00000000000000000AA0008 /* BudgetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCoordinator.swift; sourceTree = "<group>"; };
+		F00000000000000000AA0009 /* BudgetCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCoordinatorView.swift; sourceTree = "<group>"; };
+		F00000000000000000AA000B /* InvestmentsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsCoordinator.swift; sourceTree = "<group>"; };
+		F00000000000000000AA000C /* InvestmentsCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsCoordinatorView.swift; sourceTree = "<group>"; };
+		F00000000000000000AA000E /* ForecastCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCoordinator.swift; sourceTree = "<group>"; };
+		F00000000000000000AA000F /* ForecastCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCoordinatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,76 +341,6 @@
 			path = FinScopeTests;
 			sourceTree = "<group>";
 		};
-		F00000000000000000CC0001 /* DashboardCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-				F00000000000000000AA0002 /* DashboardCoordinator.swift */,
-				F00000000000000000AA0003 /* DashboardCoordinatorView.swift */,
-			);
-			path = DashboardCoordinator;
-			sourceTree = "<group>";
-		};
-		F00000000000000000CC0002 /* AccountsCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-				F00000000000000000AA0005 /* AccountsCoordinator.swift */,
-				F00000000000000000AA0006 /* AccountsCoordinatorView.swift */,
-			);
-			path = AccountsCoordinator;
-			sourceTree = "<group>";
-		};
-		F00000000000000000CC0003 /* BudgetCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-				F00000000000000000AA0008 /* BudgetCoordinator.swift */,
-				F00000000000000000AA0009 /* BudgetCoordinatorView.swift */,
-			);
-			path = BudgetCoordinator;
-			sourceTree = "<group>";
-		};
-		F00000000000000000CC0004 /* InvestmentsCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-				F00000000000000000AA000B /* InvestmentsCoordinator.swift */,
-				F00000000000000000AA000C /* InvestmentsCoordinatorView.swift */,
-			);
-			path = InvestmentsCoordinator;
-			sourceTree = "<group>";
-		};
-		F00000000000000000CC0005 /* ForecastCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-				F00000000000000000AA000E /* ForecastCoordinator.swift */,
-				F00000000000000000AA000F /* ForecastCoordinatorView.swift */,
-			);
-			path = ForecastCoordinator;
-			sourceTree = "<group>";
-		};
-		F7F7D71687B0F42EAC981B68 /* FinScope */ = {
-			isa = PBXGroup;
-			children = (
-				5183450ADA4538DED72B8404 /* FinScopeApp.swift */,
-				4069ACC4B1B0DD54C9682123 /* Assets.xcassets */,
-				E10000000000000000AA9001 /* FinScope.xcdatamodeld */,
-				E30000000000000000CC5001 /* App */,
-				5AB154CE2F3E80CC00412C7D /* AppState */,
-				E30000000000000000CC1001 /* Core */,
-				E30000000000000000CC2001 /* Domain */,
-				E30000000000000000CC3001 /* Data */,
-				E30000000000000000CC4001 /* Presentation */,
-				5AB154BC2F3E807500412C7D /* UI */,
-			);
-			path = FinScope;
-			sourceTree = "<group>";
-		};
-		E30000000000000000CC5001 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				E10000000000000000AA5001 /* CompositionRoot.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
 		E30000000000000000CC1001 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +365,7 @@
 			children = (
 				E10000000000000000AA1002 /* Decimal+Extensions.swift */,
 				E10000000000000000AA1003 /* Date+Extensions.swift */,
+				E10000000000000000AA1006 /* Notification+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -628,6 +561,14 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		E30000000000000000CC5001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA5001 /* CompositionRoot.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		E30000000000000000CC6001 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -696,6 +637,68 @@
 				E10000000000000000AA6401 /* CSVParserTests.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F00000000000000000CC0001 /* DashboardCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000AA0002 /* DashboardCoordinator.swift */,
+				F00000000000000000AA0003 /* DashboardCoordinatorView.swift */,
+			);
+			path = DashboardCoordinator;
+			sourceTree = "<group>";
+		};
+		F00000000000000000CC0002 /* AccountsCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000AA0005 /* AccountsCoordinator.swift */,
+				F00000000000000000AA0006 /* AccountsCoordinatorView.swift */,
+			);
+			path = AccountsCoordinator;
+			sourceTree = "<group>";
+		};
+		F00000000000000000CC0003 /* BudgetCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000AA0008 /* BudgetCoordinator.swift */,
+				F00000000000000000AA0009 /* BudgetCoordinatorView.swift */,
+			);
+			path = BudgetCoordinator;
+			sourceTree = "<group>";
+		};
+		F00000000000000000CC0004 /* InvestmentsCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000AA000B /* InvestmentsCoordinator.swift */,
+				F00000000000000000AA000C /* InvestmentsCoordinatorView.swift */,
+			);
+			path = InvestmentsCoordinator;
+			sourceTree = "<group>";
+		};
+		F00000000000000000CC0005 /* ForecastCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000AA000E /* ForecastCoordinator.swift */,
+				F00000000000000000AA000F /* ForecastCoordinatorView.swift */,
+			);
+			path = ForecastCoordinator;
+			sourceTree = "<group>";
+		};
+		F7F7D71687B0F42EAC981B68 /* FinScope */ = {
+			isa = PBXGroup;
+			children = (
+				5183450ADA4538DED72B8404 /* FinScopeApp.swift */,
+				4069ACC4B1B0DD54C9682123 /* Assets.xcassets */,
+				E10000000000000000AA9001 /* FinScope.xcdatamodeld */,
+				E30000000000000000CC5001 /* App */,
+				5AB154CE2F3E80CC00412C7D /* AppState */,
+				E30000000000000000CC1001 /* Core */,
+				E30000000000000000CC2001 /* Domain */,
+				E30000000000000000CC3001 /* Data */,
+				E30000000000000000CC4001 /* Presentation */,
+				5AB154BC2F3E807500412C7D /* UI */,
+			);
+			path = FinScope;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -882,6 +885,7 @@
 				E20000000000000000BB1001 /* CoreDataStack.swift in Sources */,
 				E20000000000000000BB1002 /* Decimal+Extensions.swift in Sources */,
 				E20000000000000000BB1003 /* Date+Extensions.swift in Sources */,
+				E20000000000000000BB1006 /* Notification+Extensions.swift in Sources */,
 				E20000000000000000BB1004 /* CSVParser.swift in Sources */,
 				E20000000000000000BB1005 /* CurrencyConverter.swift in Sources */,
 				E20000000000000000BB2001 /* Account.swift in Sources */,
@@ -981,7 +985,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "FinScope/Preview\\ Content";
 				DEVELOPMENT_TEAM = 5KX6A2Y8SP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1127,7 +1130,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "FinScope/Preview\\ Content";
 				DEVELOPMENT_TEAM = 5KX6A2Y8SP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -40,13 +40,15 @@ final class AccountsCoordinator: Coordinator, ObservableObject {
         self.subcategoryRepository = subcategoryRepository
     }
 
+    private(set) lazy var accountListViewModel: AccountListViewModel = makeAccountListViewModel()
+
     func start() -> some View {
         AccountsCoordinatorView(coordinator: self)
     }
 
     // MARK: - View Model Factories
 
-    func makeAccountListViewModel() -> AccountListViewModel {
+    private func makeAccountListViewModel() -> AccountListViewModel {
         let vm = AccountListViewModel(
             fetchAccountsUseCase: FetchAccountsUseCase(repository: accountRepository),
             deleteAccountUseCase: DeleteAccountUseCase(repository: accountRepository)
