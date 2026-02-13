@@ -10,6 +10,7 @@ final class ContentCoordinator: Coordinator, ObservableObject {
     private let categoryRepository: CategoryRepositoryProtocol
     private let subcategoryRepository: SubcategoryRepositoryProtocol
     private let budgetRepository: BudgetRepositoryProtocol
+    private let forecastService: ForecastServiceProtocol
 
     @MainActor private lazy var dashboardCoordinator = DashboardCoordinator()
     @MainActor private lazy var accountsCoordinator = AccountsCoordinator(
@@ -24,7 +25,11 @@ final class ContentCoordinator: Coordinator, ObservableObject {
         categoryRepository: categoryRepository
     )
     @MainActor private lazy var investmentsCoordinator = InvestmentsCoordinator()
-    @MainActor private lazy var forecastCoordinator = ForecastCoordinator()
+    @MainActor private lazy var forecastCoordinator = ForecastCoordinator(
+        accountRepository: accountRepository,
+        transactionRepository: transactionRepository,
+        forecastService: forecastService
+    )
 
     init(
         appState: AppState,
@@ -32,7 +37,8 @@ final class ContentCoordinator: Coordinator, ObservableObject {
         transactionRepository: TransactionRepositoryProtocol,
         categoryRepository: CategoryRepositoryProtocol,
         subcategoryRepository: SubcategoryRepositoryProtocol,
-        budgetRepository: BudgetRepositoryProtocol
+        budgetRepository: BudgetRepositoryProtocol,
+        forecastService: ForecastServiceProtocol
     ) {
         self.appState = appState
         self.accountRepository = accountRepository
@@ -40,6 +46,7 @@ final class ContentCoordinator: Coordinator, ObservableObject {
         self.categoryRepository = categoryRepository
         self.subcategoryRepository = subcategoryRepository
         self.budgetRepository = budgetRepository
+        self.forecastService = forecastService
     }
 
     func start() -> some View {

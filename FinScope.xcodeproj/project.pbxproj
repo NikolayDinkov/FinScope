@@ -118,6 +118,16 @@
 		F00000000000000000BB000C /* InvestmentsCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000C /* InvestmentsCoordinatorView.swift */; };
 		F00000000000000000BB000E /* ForecastCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000E /* ForecastCoordinator.swift */; };
 		F00000000000000000BB000F /* ForecastCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA000F /* ForecastCoordinatorView.swift */; };
+		E20000000000000000BBF001 /* MonthlyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF001 /* MonthlyForecast.swift */; };
+		E20000000000000000BBF002 /* ForecastServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF002 /* ForecastServiceProtocol.swift */; };
+		E20000000000000000BBF003 /* GenerateForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF003 /* GenerateForecastUseCase.swift */; };
+		E20000000000000000BBF004 /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF004 /* ForecastService.swift */; };
+		E20000000000000000BBF005 /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF005 /* ForecastViewModel.swift */; };
+		E20000000000000000BBF006 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF006 /* ForecastView.swift */; };
+		E20000000000000000BBF007 /* ForecastMonthRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF007 /* ForecastMonthRowView.swift */; };
+		E20000000000000000BBF101 /* MockForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF101 /* MockForecastService.swift */; };
+		E20000000000000000BBF102 /* GenerateForecastUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF102 /* GenerateForecastUseCaseTests.swift */; };
+		E20000000000000000BBF103 /* ForecastServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF103 /* ForecastServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +262,16 @@
 		F00000000000000000AA000C /* InvestmentsCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsCoordinatorView.swift; sourceTree = "<group>"; };
 		F00000000000000000AA000E /* ForecastCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCoordinator.swift; sourceTree = "<group>"; };
 		F00000000000000000AA000F /* ForecastCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCoordinatorView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAF001 /* MonthlyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyForecast.swift; sourceTree = "<group>"; };
+		E10000000000000000AAF002 /* ForecastServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastServiceProtocol.swift; sourceTree = "<group>"; };
+		E10000000000000000AAF003 /* GenerateForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateForecastUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AAF004 /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
+		E10000000000000000AAF005 /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AAF006 /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAF007 /* ForecastMonthRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastMonthRowView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAF101 /* MockForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockForecastService.swift; sourceTree = "<group>"; };
+		E10000000000000000AAF102 /* GenerateForecastUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateForecastUseCaseTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AAF103 /* ForecastServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,6 +440,7 @@
 				E30000000000000000CC2002 /* Entities */,
 				E30000000000000000CC2003 /* Repositories */,
 				E30000000000000000CC2004 /* UseCases */,
+				E30000000000000000CCF001 /* Services */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -433,6 +454,7 @@
 				E10000000000000000AA2004 /* Subcategory.swift */,
 				E10000000000000000AA2005 /* RecurrenceRule.swift */,
 				E10000000000000000AA2006 /* Budget.swift */,
+				E10000000000000000AAF001 /* MonthlyForecast.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -456,6 +478,7 @@
 				E30000000000000000CC2006 /* Transaction */,
 				E30000000000000000CC2007 /* Category */,
 				E30000000000000000CC2008 /* Budget */,
+				E30000000000000000CCF002 /* Forecast */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -514,6 +537,7 @@
 				E30000000000000000CC3003 /* Mappers */,
 				E30000000000000000CC3004 /* Repositories */,
 				E30000000000000000CC3005 /* Seeds */,
+				E30000000000000000CCF003 /* Services */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -569,6 +593,7 @@
 				E30000000000000000CC4003 /* Transactions */,
 				E30000000000000000CC4004 /* Categories */,
 				E30000000000000000CC4005 /* Budgets */,
+				E30000000000000000CCF004 /* Forecasts */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -634,6 +659,7 @@
 				E10000000000000000AA6002 /* MockTransactionRepository.swift */,
 				E10000000000000000AA6003 /* MockCategoryRepository.swift */,
 				E10000000000000000AA6004 /* MockSubcategoryRepository.swift */,
+				E10000000000000000AAF101 /* MockForecastService.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -667,6 +693,7 @@
 				E10000000000000000AA6205 /* DeleteTransactionUseCaseTests.swift */,
 				E10000000000000000AA6206 /* ImportTransactionsUseCaseTests.swift */,
 				E10000000000000000AA6207 /* ExportTransactionsUseCaseTests.swift */,
+				E10000000000000000AAF102 /* GenerateForecastUseCaseTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -693,6 +720,7 @@
 			isa = PBXGroup;
 			children = (
 				E10000000000000000AA6401 /* CSVParserTests.swift */,
+				E10000000000000000AAF103 /* ForecastServiceTests.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -757,6 +785,40 @@
 				5AB154BC2F3E807500412C7D /* UI */,
 			);
 			path = FinScope;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CCF001 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AAF002 /* ForecastServiceProtocol.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CCF002 /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AAF003 /* GenerateForecastUseCase.swift */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CCF003 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AAF004 /* ForecastService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CCF004 /* Forecasts */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AAF005 /* ForecastViewModel.swift */,
+				E10000000000000000AAF006 /* ForecastView.swift */,
+				E10000000000000000AAF007 /* ForecastMonthRowView.swift */,
+			);
+			path = Forecasts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -915,6 +977,9 @@
 				E20000000000000000BB6301 /* AccountMapperTests.swift in Sources */,
 				E20000000000000000BB6302 /* TransactionMapperTests.swift in Sources */,
 				E20000000000000000BB6401 /* CSVParserTests.swift in Sources */,
+				E20000000000000000BBF101 /* MockForecastService.swift in Sources */,
+				E20000000000000000BBF102 /* GenerateForecastUseCaseTests.swift in Sources */,
+				E20000000000000000BBF103 /* ForecastServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1012,6 +1077,13 @@
 				E20000000000000000BB4304 /* BudgetFormView.swift in Sources */,
 				E20000000000000000BB5001 /* CompositionRoot.swift in Sources */,
 				E20000000000000000BB9001 /* FinScope.xcdatamodeld in Sources */,
+				E20000000000000000BBF001 /* MonthlyForecast.swift in Sources */,
+				E20000000000000000BBF002 /* ForecastServiceProtocol.swift in Sources */,
+				E20000000000000000BBF003 /* GenerateForecastUseCase.swift in Sources */,
+				E20000000000000000BBF004 /* ForecastService.swift in Sources */,
+				E20000000000000000BBF005 /* ForecastViewModel.swift in Sources */,
+				E20000000000000000BBF006 /* ForecastView.swift in Sources */,
+				E20000000000000000BBF007 /* ForecastMonthRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

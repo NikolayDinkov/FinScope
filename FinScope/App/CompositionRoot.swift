@@ -11,6 +11,7 @@ final class CompositionRoot {
     let categoryRepository: CategoryRepositoryProtocol
     let subcategoryRepository: SubcategoryRepositoryProtocol
     let budgetRepository: BudgetRepositoryProtocol
+    let forecastService: ForecastServiceProtocol
 
     private init() {
         coreDataStack = CoreDataStack()
@@ -21,6 +22,7 @@ final class CompositionRoot {
         categoryRepository = CoreDataCategoryRepository(context: context)
         subcategoryRepository = CoreDataSubcategoryRepository(context: context)
         budgetRepository = CoreDataBudgetRepository(context: context)
+        forecastService = ForecastService()
     }
 
     func seedDefaultCategories() async {

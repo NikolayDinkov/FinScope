@@ -5,10 +5,10 @@ struct ForecastCoordinatorView: View {
 
     var body: some View {
         NavigationStack(path: $coordinator.path) {
-            Text("Forecast")
-                .font(.largeTitle)
-                .navigationTitle("Forecast")
-                .navigationDestination(for: NavigationDestination.self) { _ in Text("Not implemented") }
+            ForecastView(viewModel: coordinator.forecastViewModel)
+                .navigationDestination(for: NavigationDestination.self) { _ in
+                    Text("Not implemented")
+                }
         }
     }
 }
