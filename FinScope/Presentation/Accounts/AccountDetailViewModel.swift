@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 @MainActor @Observable
 final class AccountDetailViewModel {
@@ -17,6 +18,7 @@ final class AccountDetailViewModel {
     private let fetchTransactionsUseCase: FetchTransactionsUseCase
     private let fetchCategoriesUseCase: FetchCategoriesUseCase
     private let deleteTransactionUseCase: DeleteTransactionUseCase
+    private var cancellables = Set<AnyCancellable>()
 
     init(
         accountId: UUID,
@@ -30,6 +32,14 @@ final class AccountDetailViewModel {
         self.fetchTransactionsUseCase = fetchTransactionsUseCase
         self.fetchCategoriesUseCase = fetchCategoriesUseCase
         self.deleteTransactionUseCase = deleteTransactionUseCase
+
+        NotificationCenter.default.publisher(for: .accountsDidChange)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self else { return }
+                Task { await self.load() }
+            }
+            .store(in: &cancellables)
     }
 
     func load() async {

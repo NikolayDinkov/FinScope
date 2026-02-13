@@ -41,6 +41,7 @@ final class AccountsCoordinator: Coordinator, ObservableObject {
     }
 
     private(set) lazy var accountListViewModel: AccountListViewModel = makeAccountListViewModel()
+    private var accountDetailViewModels: [UUID: AccountDetailViewModel] = [:]
 
     func start() -> some View {
         AccountsCoordinatorView(coordinator: self)
@@ -62,7 +63,10 @@ final class AccountsCoordinator: Coordinator, ObservableObject {
         return vm
     }
 
-    func makeAccountDetailViewModel(accountId: UUID) -> AccountDetailViewModel {
+    func accountDetailViewModel(for accountId: UUID) -> AccountDetailViewModel {
+        if let cached = accountDetailViewModels[accountId] {
+            return cached
+        }
         let vm = AccountDetailViewModel(
             accountId: accountId,
             fetchAccountUseCase: FetchAccountUseCase(repository: accountRepository),
@@ -79,6 +83,7 @@ final class AccountsCoordinator: Coordinator, ObservableObject {
         vm.onAddTransaction = { [weak self] in
             self?.sheet = .transactionForm(accountId: accountId, transactionId: nil)
         }
+        accountDetailViewModels[accountId] = vm
         return vm
     }
 

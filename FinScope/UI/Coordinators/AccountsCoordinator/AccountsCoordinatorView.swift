@@ -9,7 +9,7 @@ struct AccountsCoordinatorView: View {
                 .navigationDestination(for: NavigationDestination.self) { destination in
                     switch destination {
                     case .accountDetail(let accountId):
-                        AccountDetailView(viewModel: coordinator.makeAccountDetailViewModel(accountId: accountId))
+                        AccountDetailView(viewModel: coordinator.accountDetailViewModel(for: accountId))
                     default:
                         Text("Not implemented")
                     }
