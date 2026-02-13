@@ -8,15 +8,11 @@ struct DashboardTransactionRowView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: categoryIcon)
-                .foregroundStyle(Color(hex: categoryColorHex))
-                .frame(width: 32, height: 32)
-                .background(Color(hex: categoryColorHex).opacity(0.15))
-                .clipShape(Circle())
+            CircularIcon(systemName: categoryIcon, color: Color(hex: categoryColorHex))
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(categoryName)
-                    .font(.body)
+                    .font(.body.weight(.medium))
                 if !transaction.note.isEmpty {
                     Text(transaction.note)
                         .font(.caption)
@@ -29,14 +25,14 @@ struct DashboardTransactionRowView: View {
 
             VStack(alignment: .trailing, spacing: 2) {
                 Text(amountText)
-                    .font(.body.monospacedDigit())
+                    .font(.body.bold().monospacedDigit())
                     .foregroundStyle(amountColor)
                 Text(transaction.date, style: .date)
                     .font(.caption2)
                     .foregroundStyle(.secondary)
             }
         }
-        .padding(.vertical, 2)
+        .padding(.vertical, 4)
     }
 
     private var amountText: String {

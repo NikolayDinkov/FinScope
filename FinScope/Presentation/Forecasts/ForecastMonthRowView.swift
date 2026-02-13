@@ -11,8 +11,19 @@ struct ForecastMonthRowView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(Self.monthFormatter.string(from: forecast.month))
-                .font(.headline)
+            HStack {
+                Text(Self.monthFormatter.string(from: forecast.month))
+                    .font(.headline)
+
+                Spacer()
+
+                ChangeIndicator(
+                    value: forecast.netCashFlow,
+                    formatted: forecast.netCashFlow.currencyFormatted(),
+                    font: .subheadline.bold().monospacedDigit(),
+                    showBackground: true
+                )
+            }
 
             HStack {
                 VStack(alignment: .leading, spacing: 2) {
@@ -38,24 +49,14 @@ struct ForecastMonthRowView: View {
                 Spacer()
 
                 VStack(alignment: .trailing, spacing: 2) {
-                    Text("Net")
+                    Text("Balance")
                         .font(.caption)
                         .foregroundStyle(.secondary)
-                    Text(forecast.netCashFlow.currencyFormatted())
-                        .font(.subheadline.monospacedDigit())
-                        .foregroundStyle(forecast.netCashFlow >= 0 ? .green : .red)
+                    Text(forecast.projectedBalance.currencyFormatted())
+                        .font(.subheadline.bold().monospacedDigit())
                 }
             }
-
-            HStack {
-                Text("Ending Balance")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                Spacer()
-                Text(forecast.projectedBalance.currencyFormatted())
-                    .font(.subheadline.bold().monospacedDigit())
-            }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, 8)
     }
 }

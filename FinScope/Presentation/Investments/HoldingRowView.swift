@@ -18,7 +18,12 @@ struct HoldingRowView: View {
     }
 
     var body: some View {
-        HStack {
+        HStack(spacing: 12) {
+            CircularIcon(
+                systemName: "chart.line.uptrend.xyaxis",
+                color: .purple
+            )
+
             VStack(alignment: .leading, spacing: 2) {
                 Text(holding.assetTicker)
                     .font(.headline)
@@ -31,13 +36,12 @@ struct HoldingRowView: View {
 
             VStack(alignment: .trailing, spacing: 2) {
                 Text(marketValue.currencyFormatted())
-                    .font(.body.monospacedDigit())
-                HStack(spacing: 2) {
-                    Image(systemName: gainLoss >= 0 ? "arrow.up.right" : "arrow.down.right")
-                    Text("\(gainLoss.currencyFormatted()) (\(gainLossPercent.percentageFormatted()))")
-                }
-                .font(.caption.monospacedDigit())
-                .foregroundStyle(gainLoss >= 0 ? .green : .red)
+                    .font(.body.bold().monospacedDigit())
+                ChangeIndicator(
+                    value: gainLoss,
+                    formatted: "\(gainLoss.currencyFormatted()) (\(gainLossPercent.percentageFormatted()))",
+                    font: .caption.monospacedDigit()
+                )
             }
         }
         .padding(.vertical, 4)

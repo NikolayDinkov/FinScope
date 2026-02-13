@@ -30,11 +30,11 @@ extension BottomNavigationTab {
 
     var image: Image {
         switch self {
-        case .dashboard: Image(systemName: "house")
-        case .accounts: Image(systemName: "creditcard")
-        case .budget: Image(systemName: "chart.pie")
+        case .dashboard: Image(systemName: "house.fill")
+        case .accounts: Image(systemName: "creditcard.fill")
+        case .budget: Image(systemName: "chart.pie.fill")
         case .investments: Image(systemName: "chart.line.uptrend.xyaxis")
-        case .forecast: Image(systemName: "chart.bar")
+        case .forecast: Image(systemName: "chart.bar.fill")
         }
     }
 }

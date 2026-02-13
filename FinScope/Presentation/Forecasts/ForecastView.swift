@@ -4,50 +4,77 @@ struct ForecastView: View {
     @Bindable var viewModel: ForecastViewModel
 
     var body: some View {
-        List {
-            Section {
-                VStack(spacing: 12) {
-                    Picker("Horizon", selection: $viewModel.selectedHorizon) {
-                        Text("3M").tag(ForecastHorizon.threeMonths)
-                        Text("6M").tag(ForecastHorizon.sixMonths)
-                        Text("12M").tag(ForecastHorizon.twelveMonths)
-                    }
-                    .pickerStyle(.segmented)
+        ScrollView {
+            VStack(spacing: FinScopeTheme.sectionSpacing) {
+                // Horizon Picker + Balance Card
+                VStack(spacing: 16) {
+                    PillSegmentControl(
+                        options: ForecastHorizon.allCases,
+                        selected: $viewModel.selectedHorizon,
+                        label: { "\($0.rawValue)M" }
+                    )
                     .onChange(of: viewModel.selectedHorizon) { _, newValue in
                         viewModel.changeHorizon(to: newValue)
                     }
 
-                    VStack(spacing: 4) {
+                    VStack(spacing: 6) {
                         Text("Current Balance")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                         Text(viewModel.currentBalance.currencyFormatted())
-                            .font(.title2.bold().monospacedDigit())
+                            .font(.system(size: 32, weight: .bold, design: .rounded).monospacedDigit())
 
-                        HStack(spacing: 4) {
-                            Image(systemName: viewModel.balanceChange >= 0
-                                  ? "arrow.up.right" : "arrow.down.right")
-                            Text(viewModel.projectedEndBalance.currencyFormatted())
-                        }
-                        .font(.headline.monospacedDigit())
-                        .foregroundStyle(viewModel.balanceChange >= 0 ? .green : .red)
+                        ChangeIndicator(
+                            value: viewModel.balanceChange,
+                            formatted: viewModel.projectedEndBalance.currencyFormatted(),
+                            font: .headline.monospacedDigit(),
+                            showBackground: true
+                        )
 
                         Text("projected in \(viewModel.selectedHorizon.rawValue) months")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
-                }
-                .padding(.vertical, 4)
-            }
 
-            if !viewModel.forecasts.isEmpty {
-                Section("Monthly Breakdown") {
-                    ForEach(viewModel.forecasts) { forecast in
-                        ForecastMonthRowView(forecast: forecast)
+                    // Balance projection sparkline
+                    if !viewModel.forecasts.isEmpty {
+                        let forecastTicks = viewModel.forecasts.enumerated().map { index, forecast in
+                            PriceTick(
+                                ticker: "forecast",
+                                price: forecast.projectedBalance,
+                                timestamp: forecast.month
+                            )
+                        }
+                        SparklineView(
+                            ticks: forecastTicks,
+                            lineColor: viewModel.balanceChange >= 0 ? .green : .red
+                        )
+                        .frame(height: 80)
                     }
                 }
+                .cardStyle()
+
+                // Monthly Breakdown
+                if !viewModel.forecasts.isEmpty {
+                    VStack(alignment: .leading, spacing: 12) {
+                        SectionHeader(title: "Monthly Breakdown")
+
+                        VStack(spacing: 0) {
+                            ForEach(Array(viewModel.forecasts.enumerated()), id: \.element.id) { index, forecast in
+                                ForecastMonthRowView(forecast: forecast)
+                                if index < viewModel.forecasts.count - 1 {
+                                    Divider()
+                                }
+                            }
+                        }
+                    }
+                    .cardStyle()
+                }
             }
+            .padding(.horizontal)
+            .padding(.bottom, FinScopeTheme.sectionSpacing)
         }
+        .background(Color(UIColor.systemGroupedBackground))
         .overlay {
             if viewModel.forecasts.isEmpty && !viewModel.isLoading {
                 ContentUnavailableView(

@@ -9,14 +9,14 @@ struct AccountDetailView: View {
                 Section {
                     VStack(spacing: 8) {
                         Text(account.balance.currencyFormatted(code: account.currencyCode))
-                            .font(.largeTitle.bold().monospacedDigit())
+                            .font(.system(size: 34, weight: .bold, design: .rounded).monospacedDigit())
                             .foregroundStyle(account.balance >= 0 ? Color.primary : Color.red)
                         Text(account.type.displayName)
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 8)
+                    .padding(.vertical, 12)
                 }
 
                 Section("Transactions") {
