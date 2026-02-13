@@ -26,6 +26,14 @@ final class CoreDataStack: @unchecked Sendable {
 
         persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
         persistentContainer.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+
+        NotificationCenter.default.addObserver(
+            forName: .NSManagedObjectContextDidSave,
+            object: persistentContainer.viewContext,
+            queue: .main
+        ) { _ in
+            NotificationCenter.default.post(name: .dataDidChange, object: nil)
+        }
     }
 
     func saveContext() {

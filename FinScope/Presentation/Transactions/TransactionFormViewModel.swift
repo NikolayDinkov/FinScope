@@ -8,6 +8,7 @@ final class TransactionFormViewModel {
     var selectedDate = Date()
     var selectedCategoryId: UUID?
     var selectedSubcategoryId: UUID?
+    var selectedDestinationAccountId: UUID?
     var isRecurring = false
     var selectedFrequency: RecurrenceFrequency = .monthly
     var recurrenceEndDate: Date?
@@ -15,6 +16,7 @@ final class TransactionFormViewModel {
 
     var categories: [Category] = []
     var subcategories: [Subcategory] = []
+    var accounts: [Account] = []
 
     var onSave: (() -> Void)?
     var onCancel: (() -> Void)?
@@ -25,6 +27,7 @@ final class TransactionFormViewModel {
     private let addTransactionUseCase: AddTransactionUseCase
     private let updateTransactionUseCase: UpdateTransactionUseCase
     private let fetchCategoriesUseCase: FetchCategoriesUseCase
+    private let fetchAccountsUseCase: FetchAccountsUseCase
     private let subcategoryRepository: SubcategoryRepositoryProtocol
 
     init(
@@ -34,6 +37,7 @@ final class TransactionFormViewModel {
         addTransactionUseCase: AddTransactionUseCase,
         updateTransactionUseCase: UpdateTransactionUseCase,
         fetchCategoriesUseCase: FetchCategoriesUseCase,
+        fetchAccountsUseCase: FetchAccountsUseCase,
         subcategoryRepository: SubcategoryRepositoryProtocol
     ) {
         self.accountId = accountId
@@ -42,6 +46,7 @@ final class TransactionFormViewModel {
         self.addTransactionUseCase = addTransactionUseCase
         self.updateTransactionUseCase = updateTransactionUseCase
         self.fetchCategoriesUseCase = fetchCategoriesUseCase
+        self.fetchAccountsUseCase = fetchAccountsUseCase
         self.subcategoryRepository = subcategoryRepository
     }
 
@@ -49,16 +54,26 @@ final class TransactionFormViewModel {
 
     var isValid: Bool {
         guard let amount = Decimal(string: amountText), amount > 0 else { return false }
-        return selectedCategoryId != nil
+        if selectedType == .transfer {
+            guard let destId = selectedDestinationAccountId, destId != accountId else { return false }
+        } else {
+            guard selectedCategoryId != nil else { return false }
+        }
+        return true
     }
 
     var filteredCategories: [Category] {
         categories.filter { $0.transactionType == selectedType }
     }
 
+    var availableDestinationAccounts: [Account] {
+        accounts.filter { $0.id != accountId }
+    }
+
     func load() async {
         do {
             categories = try await fetchCategoriesUseCase.execute()
+            accounts = try await fetchAccountsUseCase.execute()
 
             if let transactionId,
                let transactions = try? await fetchTransactionsUseCase.execute(for: accountId),
@@ -69,6 +84,7 @@ final class TransactionFormViewModel {
                 selectedDate = existing.date
                 selectedCategoryId = existing.categoryId
                 selectedSubcategoryId = existing.subcategoryId
+                selectedDestinationAccountId = existing.destinationAccountId
                 isRecurring = existing.isRecurring
                 if let rule = existing.recurrenceRule {
                     selectedFrequency = rule.frequency
@@ -94,11 +110,13 @@ final class TransactionFormViewModel {
     }
 
     func save() async {
-        guard let amount = Decimal(string: amountText), amount > 0,
-              let categoryId = selectedCategoryId else {
-            errorMessage = "Please enter a valid amount and select a category."
+        guard let amount = Decimal(string: amountText), amount > 0 else {
+            errorMessage = "Please enter a valid amount."
             return
         }
+
+        let categoryId = selectedCategoryId
+        let destinationAccountId = selectedType == .transfer ? selectedDestinationAccountId : nil
 
         let recurrenceRule: RecurrenceRule? = isRecurring
             ? RecurrenceRule(
@@ -113,6 +131,7 @@ final class TransactionFormViewModel {
                 let transaction = Transaction(
                     id: transactionId,
                     accountId: accountId,
+                    destinationAccountId: destinationAccountId,
                     type: selectedType,
                     amount: amount,
                     categoryId: categoryId,
@@ -126,6 +145,7 @@ final class TransactionFormViewModel {
             } else {
                 let transaction = Transaction(
                     accountId: accountId,
+                    destinationAccountId: destinationAccountId,
                     type: selectedType,
                     amount: amount,
                     categoryId: categoryId,

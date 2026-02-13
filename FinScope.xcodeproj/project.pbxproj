@@ -90,6 +90,20 @@
 		E20000000000000000BB6301 /* AccountMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6301 /* AccountMapperTests.swift */; };
 		E20000000000000000BB6302 /* TransactionMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6302 /* TransactionMapperTests.swift */; };
 		E20000000000000000BB6401 /* CSVParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA6401 /* CSVParserTests.swift */; };
+		E20000000000000000BB2006 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2006 /* Budget.swift */; };
+		E20000000000000000BB2105 /* BudgetRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2105 /* BudgetRepositoryProtocol.swift */; };
+		E20000000000000000BB2501 /* FetchBudgetsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2501 /* FetchBudgetsUseCase.swift */; };
+		E20000000000000000BB2502 /* CreateBudgetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2502 /* CreateBudgetUseCase.swift */; };
+		E20000000000000000BB2503 /* UpdateBudgetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2503 /* UpdateBudgetUseCase.swift */; };
+		E20000000000000000BB2504 /* DeleteBudgetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2504 /* DeleteBudgetUseCase.swift */; };
+		E20000000000000000BB2505 /* FetchCategorySpendingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA2505 /* FetchCategorySpendingUseCase.swift */; };
+		E20000000000000000BB3005 /* BudgetMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3005 /* BudgetMO.swift */; };
+		E20000000000000000BB3105 /* BudgetMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3105 /* BudgetMapper.swift */; };
+		E20000000000000000BB3205 /* CoreDataBudgetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3205 /* CoreDataBudgetRepository.swift */; };
+		E20000000000000000BB4301 /* BudgetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4301 /* BudgetListViewModel.swift */; };
+		E20000000000000000BB4302 /* BudgetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4302 /* BudgetListView.swift */; };
+		E20000000000000000BB4303 /* BudgetFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4303 /* BudgetFormViewModel.swift */; };
+		E20000000000000000BB4304 /* BudgetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA4304 /* BudgetFormView.swift */; };
 		E20000000000000000BB9001 /* FinScope.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA9001 /* FinScope.xcdatamodeld */; };
 		ED71D6C7DEDA9961826CA09F /* FinScopeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E3F53CBA8D035EC5C697 /* FinScopeTests.swift */; };
 		F00000000000000000BB0001 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000AA0001 /* Coordinator.swift */; };
@@ -211,6 +225,20 @@
 		E10000000000000000AA6301 /* AccountMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMapperTests.swift; sourceTree = "<group>"; };
 		E10000000000000000AA6302 /* TransactionMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMapperTests.swift; sourceTree = "<group>"; };
 		E10000000000000000AA6401 /* CSVParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParserTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2006 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2105 /* BudgetRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetRepositoryProtocol.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2501 /* FetchBudgetsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBudgetsUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2502 /* CreateBudgetUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBudgetUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2503 /* UpdateBudgetUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBudgetUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2504 /* DeleteBudgetUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteBudgetUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA2505 /* FetchCategorySpendingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCategorySpendingUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3005 /* BudgetMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetMO.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3105 /* BudgetMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetMapper.swift; sourceTree = "<group>"; };
+		E10000000000000000AA3205 /* CoreDataBudgetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBudgetRepository.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4301 /* BudgetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4302 /* BudgetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListView.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4303 /* BudgetFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetFormViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AA4304 /* BudgetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetFormView.swift; sourceTree = "<group>"; };
 		E10000000000000000AA9001 /* FinScope.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodeld; path = FinScope.xcdatamodeld; sourceTree = "<group>"; };
 		F00000000000000000AA0001 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F00000000000000000AA0002 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
@@ -404,6 +432,7 @@
 				E10000000000000000AA2003 /* Category.swift */,
 				E10000000000000000AA2004 /* Subcategory.swift */,
 				E10000000000000000AA2005 /* RecurrenceRule.swift */,
+				E10000000000000000AA2006 /* Budget.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -415,6 +444,7 @@
 				E10000000000000000AA2102 /* TransactionRepositoryProtocol.swift */,
 				E10000000000000000AA2103 /* CategoryRepositoryProtocol.swift */,
 				E10000000000000000AA2104 /* SubcategoryRepositoryProtocol.swift */,
+				E10000000000000000AA2105 /* BudgetRepositoryProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -425,6 +455,7 @@
 				E30000000000000000CC2005 /* Account */,
 				E30000000000000000CC2006 /* Transaction */,
 				E30000000000000000CC2007 /* Category */,
+				E30000000000000000CC2008 /* Budget */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -464,6 +495,18 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		E30000000000000000CC2008 /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA2501 /* FetchBudgetsUseCase.swift */,
+				E10000000000000000AA2502 /* CreateBudgetUseCase.swift */,
+				E10000000000000000AA2503 /* UpdateBudgetUseCase.swift */,
+				E10000000000000000AA2504 /* DeleteBudgetUseCase.swift */,
+				E10000000000000000AA2505 /* FetchCategorySpendingUseCase.swift */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
 		E30000000000000000CC3001 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +525,7 @@
 				E10000000000000000AA3002 /* TransactionMO.swift */,
 				E10000000000000000AA3003 /* CategoryMO.swift */,
 				E10000000000000000AA3004 /* SubcategoryMO.swift */,
+				E10000000000000000AA3005 /* BudgetMO.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -493,6 +537,7 @@
 				E10000000000000000AA3102 /* TransactionMapper.swift */,
 				E10000000000000000AA3103 /* CategoryMapper.swift */,
 				E10000000000000000AA3104 /* SubcategoryMapper.swift */,
+				E10000000000000000AA3105 /* BudgetMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -504,6 +549,7 @@
 				E10000000000000000AA3202 /* CoreDataTransactionRepository.swift */,
 				E10000000000000000AA3203 /* CoreDataCategoryRepository.swift */,
 				E10000000000000000AA3204 /* CoreDataSubcategoryRepository.swift */,
+				E10000000000000000AA3205 /* CoreDataBudgetRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -522,6 +568,7 @@
 				E30000000000000000CC4002 /* Accounts */,
 				E30000000000000000CC4003 /* Transactions */,
 				E30000000000000000CC4004 /* Categories */,
+				E30000000000000000CC4005 /* Budgets */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -559,6 +606,17 @@
 				E10000000000000000AA4203 /* CategoryFormView.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CC4005 /* Budgets */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AA4301 /* BudgetListViewModel.swift */,
+				E10000000000000000AA4302 /* BudgetListView.swift */,
+				E10000000000000000AA4303 /* BudgetFormViewModel.swift */,
+				E10000000000000000AA4304 /* BudgetFormView.swift */,
+			);
+			path = Budgets;
 			sourceTree = "<group>";
 		};
 		E30000000000000000CC5001 /* App */ = {
@@ -938,6 +996,20 @@
 				E20000000000000000BB4201 /* CategoryListViewModel.swift in Sources */,
 				E20000000000000000BB4202 /* CategoryListView.swift in Sources */,
 				E20000000000000000BB4203 /* CategoryFormView.swift in Sources */,
+				E20000000000000000BB2006 /* Budget.swift in Sources */,
+				E20000000000000000BB2105 /* BudgetRepositoryProtocol.swift in Sources */,
+				E20000000000000000BB2501 /* FetchBudgetsUseCase.swift in Sources */,
+				E20000000000000000BB2502 /* CreateBudgetUseCase.swift in Sources */,
+				E20000000000000000BB2503 /* UpdateBudgetUseCase.swift in Sources */,
+				E20000000000000000BB2504 /* DeleteBudgetUseCase.swift in Sources */,
+				E20000000000000000BB2505 /* FetchCategorySpendingUseCase.swift in Sources */,
+				E20000000000000000BB3005 /* BudgetMO.swift in Sources */,
+				E20000000000000000BB3105 /* BudgetMapper.swift in Sources */,
+				E20000000000000000BB3205 /* CoreDataBudgetRepository.swift in Sources */,
+				E20000000000000000BB4301 /* BudgetListViewModel.swift in Sources */,
+				E20000000000000000BB4302 /* BudgetListView.swift in Sources */,
+				E20000000000000000BB4303 /* BudgetFormViewModel.swift in Sources */,
+				E20000000000000000BB4304 /* BudgetFormView.swift in Sources */,
 				E20000000000000000BB5001 /* CompositionRoot.swift in Sources */,
 				E20000000000000000BB9001 /* FinScope.xcdatamodeld in Sources */,
 			);

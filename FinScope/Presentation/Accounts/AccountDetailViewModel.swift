@@ -13,7 +13,7 @@ final class AccountDetailViewModel {
     var onAddTransaction: (() -> Void)?
     var onBack: (() -> Void)?
 
-    private let accountId: UUID
+    let accountId: UUID
     private let fetchAccountUseCase: FetchAccountUseCase
     private let fetchTransactionsUseCase: FetchTransactionsUseCase
     private let fetchCategoriesUseCase: FetchCategoriesUseCase
@@ -33,7 +33,7 @@ final class AccountDetailViewModel {
         self.fetchCategoriesUseCase = fetchCategoriesUseCase
         self.deleteTransactionUseCase = deleteTransactionUseCase
 
-        NotificationCenter.default.publisher(for: .accountsDidChange)
+        NotificationCenter.default.publisher(for: .dataDidChange)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 guard let self else { return }
@@ -64,15 +64,18 @@ final class AccountDetailViewModel {
         }
     }
 
-    func categoryName(for id: UUID) -> String {
-        categories.first { $0.id == id }?.name ?? ""
+    func categoryName(for id: UUID?) -> String {
+        guard let id else { return "Transfer" }
+        return categories.first { $0.id == id }?.name ?? ""
     }
 
-    func categoryIcon(for id: UUID) -> String {
-        categories.first { $0.id == id }?.icon ?? "circle.fill"
+    func categoryIcon(for id: UUID?) -> String {
+        guard let id else { return "arrow.left.arrow.right" }
+        return categories.first { $0.id == id }?.icon ?? "circle.fill"
     }
 
-    func categoryColorHex(for id: UUID) -> String {
-        categories.first { $0.id == id }?.colorHex ?? "#007AFF"
+    func categoryColorHex(for id: UUID?) -> String {
+        guard let id else { return "#007AFF" }
+        return categories.first { $0.id == id }?.colorHex ?? "#007AFF"
     }
 }

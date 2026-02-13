@@ -28,6 +28,25 @@ struct DeleteTransactionUseCase: Sendable {
             try await accountRepository.update(account)
         }
 
+        if transaction.type == .transfer,
+           let destinationId = transaction.destinationAccountId,
+           var destinationAccount = try await accountRepository.fetchById(destinationId) {
+            let sourceAccount = try await accountRepository.fetchById(transaction.accountId)
+            let debitAmount: Decimal
+            if let sourceAccount, sourceAccount.currencyCode != destinationAccount.currencyCode {
+                debitAmount = CurrencyConverter.convert(
+                    amount: transaction.amount,
+                    from: sourceAccount.currencyCode,
+                    to: destinationAccount.currencyCode
+                )
+            } else {
+                debitAmount = transaction.amount
+            }
+            destinationAccount.balance -= debitAmount
+            destinationAccount.updatedAt = Date()
+            try await accountRepository.update(destinationAccount)
+        }
+
         try await transactionRepository.delete(id)
     }
 }

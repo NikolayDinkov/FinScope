@@ -19,7 +19,7 @@ final class CoreDataTransactionRepository: TransactionRepositoryProtocol, @unche
     func fetchAll(for accountId: UUID) async throws -> [Transaction] {
         try await context.perform {
             let request = TransactionMO.fetchRequest() as! NSFetchRequest<TransactionMO>
-            request.predicate = NSPredicate(format: "account.id == %@", accountId as CVarArg)
+            request.predicate = NSPredicate(format: "account.id == %@ OR destinationAccount.id == %@", accountId as CVarArg, accountId as CVarArg)
             request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
             let results = try self.context.fetch(request)
             return results.map { TransactionMapper.toDomain($0) }
@@ -55,16 +55,25 @@ final class CoreDataTransactionRepository: TransactionRepositoryProtocol, @unche
             accountRequest.fetchLimit = 1
             mo.account = try self.context.fetch(accountRequest).first
 
-            let categoryRequest = CategoryMO.fetchRequest() as! NSFetchRequest<CategoryMO>
-            categoryRequest.predicate = NSPredicate(format: "id == %@", transaction.categoryId as CVarArg)
-            categoryRequest.fetchLimit = 1
-            mo.category = try self.context.fetch(categoryRequest).first
+            if let categoryId = transaction.categoryId {
+                let categoryRequest = CategoryMO.fetchRequest() as! NSFetchRequest<CategoryMO>
+                categoryRequest.predicate = NSPredicate(format: "id == %@", categoryId as CVarArg)
+                categoryRequest.fetchLimit = 1
+                mo.category = try self.context.fetch(categoryRequest).first
+            }
 
             if let subcategoryId = transaction.subcategoryId {
                 let subRequest = SubcategoryMO.fetchRequest() as! NSFetchRequest<SubcategoryMO>
                 subRequest.predicate = NSPredicate(format: "id == %@", subcategoryId as CVarArg)
                 subRequest.fetchLimit = 1
                 mo.subcategory = try self.context.fetch(subRequest).first
+            }
+
+            if let destinationAccountId = transaction.destinationAccountId {
+                let destRequest = AccountMO.fetchRequest() as! NSFetchRequest<AccountMO>
+                destRequest.predicate = NSPredicate(format: "id == %@", destinationAccountId as CVarArg)
+                destRequest.fetchLimit = 1
+                mo.destinationAccount = try self.context.fetch(destRequest).first
             }
 
             try self.context.save()
@@ -79,10 +88,14 @@ final class CoreDataTransactionRepository: TransactionRepositoryProtocol, @unche
             guard let mo = try self.context.fetch(request).first else { return }
             TransactionMapper.update(mo, from: transaction)
 
-            let categoryRequest = CategoryMO.fetchRequest() as! NSFetchRequest<CategoryMO>
-            categoryRequest.predicate = NSPredicate(format: "id == %@", transaction.categoryId as CVarArg)
-            categoryRequest.fetchLimit = 1
-            mo.category = try self.context.fetch(categoryRequest).first
+            if let categoryId = transaction.categoryId {
+                let categoryRequest = CategoryMO.fetchRequest() as! NSFetchRequest<CategoryMO>
+                categoryRequest.predicate = NSPredicate(format: "id == %@", categoryId as CVarArg)
+                categoryRequest.fetchLimit = 1
+                mo.category = try self.context.fetch(categoryRequest).first
+            } else {
+                mo.category = nil
+            }
 
             if let subcategoryId = transaction.subcategoryId {
                 let subRequest = SubcategoryMO.fetchRequest() as! NSFetchRequest<SubcategoryMO>
@@ -91,6 +104,15 @@ final class CoreDataTransactionRepository: TransactionRepositoryProtocol, @unche
                 mo.subcategory = try self.context.fetch(subRequest).first
             } else {
                 mo.subcategory = nil
+            }
+
+            if let destinationAccountId = transaction.destinationAccountId {
+                let destRequest = AccountMO.fetchRequest() as! NSFetchRequest<AccountMO>
+                destRequest.predicate = NSPredicate(format: "id == %@", destinationAccountId as CVarArg)
+                destRequest.fetchLimit = 1
+                mo.destinationAccount = try self.context.fetch(destRequest).first
+            } else {
+                mo.destinationAccount = nil
             }
 
             try self.context.save()

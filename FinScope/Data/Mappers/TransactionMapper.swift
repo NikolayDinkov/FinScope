@@ -11,11 +11,12 @@ struct TransactionMapper {
         return Transaction(
             id: mo.id ?? UUID(),
             accountId: mo.account?.id ?? UUID(),
+            destinationAccountId: mo.destinationAccount?.id,
             type: TransactionType(rawValue: mo.typeRaw ?? "expense") ?? .expense,
             amount: mo.amount as? Decimal ?? 0,
             originalAmount: mo.originalAmount as? Decimal,
             originalCurrencyCode: mo.originalCurrencyCode,
-            categoryId: mo.category?.id ?? UUID(),
+            categoryId: mo.category?.id,
             subcategoryId: mo.subcategory?.id,
             note: mo.note ?? "",
             date: mo.date ?? Date(),

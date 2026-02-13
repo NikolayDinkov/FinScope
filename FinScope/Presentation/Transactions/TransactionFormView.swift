@@ -15,6 +15,7 @@ struct TransactionFormView: View {
                     .pickerStyle(.segmented)
                     .onChange(of: viewModel.selectedType) {
                         viewModel.selectedCategoryId = nil
+                        viewModel.selectedDestinationAccountId = nil
                         Task { await viewModel.loadSubcategories() }
                     }
                 }
@@ -24,23 +25,36 @@ struct TransactionFormView: View {
                         .keyboardType(.decimalPad)
                 }
 
-                Section("Category") {
-                    Picker("Category", selection: $viewModel.selectedCategoryId) {
-                        Text("Select Category").tag(nil as UUID?)
-                        ForEach(viewModel.filteredCategories) { category in
-                            Label(category.name, systemImage: category.icon)
-                                .tag(category.id as UUID?)
+                if viewModel.selectedType == .transfer {
+                    Section("Destination Account") {
+                        Picker("To Account", selection: $viewModel.selectedDestinationAccountId) {
+                            Text("Select Account").tag(nil as UUID?)
+                            ForEach(viewModel.availableDestinationAccounts) { account in
+                                Text(account.name).tag(account.id as UUID?)
+                            }
                         }
                     }
-                    .onChange(of: viewModel.selectedCategoryId) {
-                        Task { await viewModel.loadSubcategories() }
-                    }
+                }
 
-                    if !viewModel.subcategories.isEmpty {
-                        Picker("Subcategory", selection: $viewModel.selectedSubcategoryId) {
-                            Text("None").tag(nil as UUID?)
-                            ForEach(viewModel.subcategories) { sub in
-                                Text(sub.name).tag(sub.id as UUID?)
+                if viewModel.selectedType != .transfer {
+                    Section("Category") {
+                        Picker("Category", selection: $viewModel.selectedCategoryId) {
+                            Text("Select Category").tag(nil as UUID?)
+                            ForEach(viewModel.filteredCategories) { category in
+                                Label(category.name, systemImage: category.icon)
+                                    .tag(category.id as UUID?)
+                            }
+                        }
+                        .onChange(of: viewModel.selectedCategoryId) {
+                            Task { await viewModel.loadSubcategories() }
+                        }
+
+                        if !viewModel.subcategories.isEmpty {
+                            Picker("Subcategory", selection: $viewModel.selectedSubcategoryId) {
+                                Text("None").tag(nil as UUID?)
+                                ForEach(viewModel.subcategories) { sub in
+                                    Text(sub.name).tag(sub.id as UUID?)
+                                }
                             }
                         }
                     }

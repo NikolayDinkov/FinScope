@@ -5,6 +5,7 @@ struct TransactionRowView: View {
     let categoryName: String
     let categoryIcon: String
     let categoryColorHex: String
+    var viewingAccountId: UUID? = nil
 
     var body: some View {
         HStack(spacing: 12) {
@@ -39,13 +40,17 @@ struct TransactionRowView: View {
         .padding(.vertical, 2)
     }
 
+    private var isIncomingTransfer: Bool {
+        transaction.type == .transfer && transaction.destinationAccountId == viewingAccountId
+    }
+
     private var amountText: String {
-        let prefix = transaction.type == .income ? "+" : "-"
+        let prefix = (transaction.type == .income || isIncomingTransfer) ? "+" : "-"
         return prefix + transaction.amount.currencyFormatted()
     }
 
     private var amountColor: Color {
-        transaction.type == .income ? .green : .primary
+        (transaction.type == .income || isIncomingTransfer) ? .green : .primary
     }
 }
 

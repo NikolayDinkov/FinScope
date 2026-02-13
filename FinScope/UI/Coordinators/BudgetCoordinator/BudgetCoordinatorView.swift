@@ -5,10 +5,16 @@ struct BudgetCoordinatorView: View {
 
     var body: some View {
         NavigationStack(path: $coordinator.path) {
-            Text("Budget")
-                .font(.largeTitle)
-                .navigationTitle("Budget")
-                .navigationDestination(for: NavigationDestination.self) { _ in Text("Not implemented") }
+            BudgetListView(viewModel: coordinator.budgetListViewModel)
+                .navigationDestination(for: NavigationDestination.self) { _ in
+                    Text("Not implemented")
+                }
+        }
+        .sheet(item: $coordinator.sheet) { sheet in
+            switch sheet {
+            case .budgetForm(let budgetId):
+                BudgetFormView(viewModel: coordinator.makeBudgetFormViewModel(budgetId: budgetId))
+            }
         }
     }
 }

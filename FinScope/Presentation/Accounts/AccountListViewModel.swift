@@ -21,7 +21,7 @@ final class AccountListViewModel {
         self.fetchAccountsUseCase = fetchAccountsUseCase
         self.deleteAccountUseCase = deleteAccountUseCase
 
-        NotificationCenter.default.publisher(for: .accountsDidChange)
+        NotificationCenter.default.publisher(for: .dataDidChange)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 guard let self else { return }

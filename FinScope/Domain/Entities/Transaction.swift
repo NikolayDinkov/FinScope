@@ -9,11 +9,12 @@ enum TransactionType: String, CaseIterable, Sendable, Codable {
 struct Transaction: Identifiable, Equatable, Sendable {
     let id: UUID
     var accountId: UUID
+    var destinationAccountId: UUID?
     var type: TransactionType
     var amount: Decimal
     var originalAmount: Decimal?
     var originalCurrencyCode: String?
-    var categoryId: UUID
+    var categoryId: UUID?
     var subcategoryId: UUID?
     var note: String
     var date: Date
@@ -25,11 +26,12 @@ struct Transaction: Identifiable, Equatable, Sendable {
     init(
         id: UUID = UUID(),
         accountId: UUID,
+        destinationAccountId: UUID? = nil,
         type: TransactionType,
         amount: Decimal,
         originalAmount: Decimal? = nil,
         originalCurrencyCode: String? = nil,
-        categoryId: UUID,
+        categoryId: UUID? = nil,
         subcategoryId: UUID? = nil,
         note: String = "",
         date: Date = Date(),
@@ -40,6 +42,7 @@ struct Transaction: Identifiable, Equatable, Sendable {
     ) {
         self.id = id
         self.accountId = accountId
+        self.destinationAccountId = destinationAccountId
         self.type = type
         self.amount = amount
         self.originalAmount = originalAmount

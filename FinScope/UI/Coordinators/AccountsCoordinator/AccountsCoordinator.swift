@@ -113,6 +113,7 @@ final class AccountsCoordinator: Coordinator, ObservableObject {
                 accountRepository: accountRepository
             ),
             fetchCategoriesUseCase: FetchCategoriesUseCase(repository: categoryRepository),
+            fetchAccountsUseCase: FetchAccountsUseCase(repository: accountRepository),
             subcategoryRepository: subcategoryRepository
         )
         vm.onSave = { [weak self] in self?.sheet = nil }

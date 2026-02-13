@@ -29,7 +29,8 @@ struct AccountDetailView: View {
                                 transaction: transaction,
                                 categoryName: viewModel.categoryName(for: transaction.categoryId),
                                 categoryIcon: viewModel.categoryIcon(for: transaction.categoryId),
-                                categoryColorHex: viewModel.categoryColorHex(for: transaction.categoryId)
+                                categoryColorHex: viewModel.categoryColorHex(for: transaction.categoryId),
+                                viewingAccountId: viewModel.accountId
                             )
                         }
                         .onDelete { indexSet in

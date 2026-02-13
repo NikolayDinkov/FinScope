@@ -40,5 +40,24 @@ struct AddTransactionUseCase: Sendable {
             account.updatedAt = Date()
             try await accountRepository.update(account)
         }
+
+        if finalTransaction.type == .transfer,
+           let destinationId = finalTransaction.destinationAccountId,
+           var destinationAccount = try await accountRepository.fetchById(destinationId) {
+            let creditAmount: Decimal
+            let sourceAccount = try await accountRepository.fetchById(transaction.accountId)
+            if let sourceAccount, sourceAccount.currencyCode != destinationAccount.currencyCode {
+                creditAmount = CurrencyConverter.convert(
+                    amount: finalTransaction.amount,
+                    from: sourceAccount.currencyCode,
+                    to: destinationAccount.currencyCode
+                )
+            } else {
+                creditAmount = finalTransaction.amount
+            }
+            destinationAccount.balance += creditAmount
+            destinationAccount.updatedAt = Date()
+            try await accountRepository.update(destinationAccount)
+        }
     }
 }

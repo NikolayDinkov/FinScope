@@ -38,6 +38,60 @@ struct TransactionMapperTests {
         #expect(mapped.note == "Test note")
     }
 
+    @Test func testMapDestinationAccount() {
+        let context = makeInMemoryContext()
+        let accountMO = AccountMO(context: context)
+        accountMO.id = UUID()
+
+        let destAccountMO = AccountMO(context: context)
+        destAccountMO.id = UUID()
+
+        let categoryMO = CategoryMO(context: context)
+        categoryMO.id = UUID()
+
+        let original = FinScope.Transaction(
+            accountId: accountMO.id!,
+            destinationAccountId: destAccountMO.id!,
+            type: .transfer,
+            amount: 100,
+            categoryId: categoryMO.id!
+        )
+
+        let mo = TransactionMapper.toManagedObject(original, context: context)
+        mo.account = accountMO
+        mo.category = categoryMO
+        mo.destinationAccount = destAccountMO
+
+        let mapped = TransactionMapper.toDomain(mo)
+
+        #expect(mapped.destinationAccountId == destAccountMO.id)
+        #expect(mapped.type == .transfer)
+    }
+
+    @Test func testMapWithNoDestinationAccount() {
+        let context = makeInMemoryContext()
+        let accountMO = AccountMO(context: context)
+        accountMO.id = UUID()
+
+        let categoryMO = CategoryMO(context: context)
+        categoryMO.id = UUID()
+
+        let original = FinScope.Transaction(
+            accountId: accountMO.id!,
+            type: .expense,
+            amount: 50,
+            categoryId: categoryMO.id!
+        )
+
+        let mo = TransactionMapper.toManagedObject(original, context: context)
+        mo.account = accountMO
+        mo.category = categoryMO
+
+        let mapped = TransactionMapper.toDomain(mo)
+
+        #expect(mapped.destinationAccountId == nil)
+    }
+
     @Test func testRecurrenceRuleRoundTrip() {
         let context = makeInMemoryContext()
         let accountMO = AccountMO(context: context)
