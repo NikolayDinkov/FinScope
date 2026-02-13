@@ -11,6 +11,8 @@ final class ContentCoordinator: Coordinator, ObservableObject {
     private let subcategoryRepository: SubcategoryRepositoryProtocol
     private let budgetRepository: BudgetRepositoryProtocol
     private let forecastService: ForecastServiceProtocol
+    private let portfolioRepository: PortfolioRepositoryProtocol
+    private let marketService: MarketSimulatorServiceProtocol
 
     @MainActor private lazy var dashboardCoordinator = DashboardCoordinator(
         accountRepository: accountRepository,
@@ -30,7 +32,10 @@ final class ContentCoordinator: Coordinator, ObservableObject {
         transactionRepository: transactionRepository,
         categoryRepository: categoryRepository
     )
-    @MainActor private lazy var investmentsCoordinator = InvestmentsCoordinator()
+    @MainActor private lazy var investmentsCoordinator = InvestmentsCoordinator(
+        portfolioRepository: portfolioRepository,
+        marketService: marketService
+    )
     @MainActor private lazy var forecastCoordinator = ForecastCoordinator(
         accountRepository: accountRepository,
         transactionRepository: transactionRepository,
@@ -44,7 +49,9 @@ final class ContentCoordinator: Coordinator, ObservableObject {
         categoryRepository: CategoryRepositoryProtocol,
         subcategoryRepository: SubcategoryRepositoryProtocol,
         budgetRepository: BudgetRepositoryProtocol,
-        forecastService: ForecastServiceProtocol
+        forecastService: ForecastServiceProtocol,
+        portfolioRepository: PortfolioRepositoryProtocol,
+        marketService: MarketSimulatorServiceProtocol
     ) {
         self.appState = appState
         self.accountRepository = accountRepository
@@ -53,6 +60,8 @@ final class ContentCoordinator: Coordinator, ObservableObject {
         self.subcategoryRepository = subcategoryRepository
         self.budgetRepository = budgetRepository
         self.forecastService = forecastService
+        self.portfolioRepository = portfolioRepository
+        self.marketService = marketService
     }
 
     func start() -> some View {

@@ -14,7 +14,9 @@ final class AppCoordinator: Coordinator, ObservableObject {
             categoryRepository: root.categoryRepository,
             subcategoryRepository: root.subcategoryRepository,
             budgetRepository: root.budgetRepository,
-            forecastService: root.forecastService
+            forecastService: root.forecastService,
+            portfolioRepository: root.portfolioRepository,
+            marketService: root.marketService
         )
     }()
 

@@ -15,7 +15,8 @@ enum NavigationDestination: Hashable {
     case budgetDetail
 
     // Investments
-    case investmentDetail
+    case market
+    case assetDetail(ticker: String)
 
     // Forecast
     case forecastDetail

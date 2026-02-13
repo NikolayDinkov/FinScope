@@ -135,6 +135,82 @@
 		E20000000000000000BBD005 /* DashboardTransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD005 /* DashboardTransactionRowView.swift */; };
 		E20000000000000000BBD101 /* MockBudgetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD101 /* MockBudgetRepository.swift */; };
 		E20000000000000000BBD102 /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD102 /* DashboardViewModelTests.swift */; };
+		E20000000000000000BBI001 /* MockAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI001 /* MockAsset.swift */; };
+		E20000000000000000BBI002 /* PortfolioHolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI002 /* PortfolioHolding.swift */; };
+		E20000000000000000BBI003 /* Trade.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI003 /* Trade.swift */; };
+		E20000000000000000BBI004 /* PriceTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI004 /* PriceTick.swift */; };
+		E20000000000000000BBI005 /* PortfolioRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI005 /* PortfolioRepositoryProtocol.swift */; };
+		E20000000000000000BBI006 /* MarketSimulatorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI006 /* MarketSimulatorServiceProtocol.swift */; };
+		E20000000000000000BBI007 /* FetchPortfolioUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI007 /* FetchPortfolioUseCase.swift */; };
+		E20000000000000000BBI008 /* ExecuteTradeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI008 /* ExecuteTradeUseCase.swift */; };
+		E20000000000000000BBI009 /* FetchTradeHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI009 /* FetchTradeHistoryUseCase.swift */; };
+		E20000000000000000BBI010 /* PortfolioHoldingMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI010 /* PortfolioHoldingMO.swift */; };
+		E20000000000000000BBI011 /* TradeMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI011 /* TradeMO.swift */; };
+		E20000000000000000BBI012 /* PortfolioHoldingMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI012 /* PortfolioHoldingMapper.swift */; };
+		E20000000000000000BBI013 /* TradeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI013 /* TradeMapper.swift */; };
+		E20000000000000000BBI014 /* CoreDataPortfolioRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI014 /* CoreDataPortfolioRepository.swift */; };
+		E20000000000000000BBI015 /* MockAssetCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI015 /* MockAssetCatalog.swift */; };
+		E20000000000000000BBI016 /* MarketSimulatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI016 /* MarketSimulatorService.swift */; };
+		E20000000000000000BBI017 /* PortfolioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI017 /* PortfolioViewModel.swift */; };
+		E20000000000000000BBI018 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI018 /* PortfolioView.swift */; };
+		E20000000000000000BBI019 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI019 /* MarketViewModel.swift */; };
+		E20000000000000000BBI020 /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI020 /* MarketView.swift */; };
+		E20000000000000000BBI021 /* AssetDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI021 /* AssetDetailViewModel.swift */; };
+		E20000000000000000BBI022 /* AssetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI022 /* AssetDetailView.swift */; };
+		E20000000000000000BBI023 /* TradeFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI023 /* TradeFormViewModel.swift */; };
+		E20000000000000000BBI024 /* TradeFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI024 /* TradeFormView.swift */; };
+		E20000000000000000BBI025 /* SparklineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI025 /* SparklineView.swift */; };
+		E20000000000000000BBI026 /* HoldingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI026 /* HoldingRowView.swift */; };
+		E20000000000000000BBI027 /* TradeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI027 /* TradeRowView.swift */; };
+		E20000000000000000BBI028 /* MockPortfolioRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI028 /* MockPortfolioRepository.swift */; };
+		E20000000000000000BBI029 /* MockMarketSimulatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI029 /* MockMarketSimulatorService.swift */; };
+		E20000000000000000BBI030 /* ExecuteTradeUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI030 /* ExecuteTradeUseCaseTests.swift */; };
+		E20000000000000000BBI031 /* FetchPortfolioUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI031 /* FetchPortfolioUseCaseTests.swift */; };
+		E20000000000000000BBI032 /* FetchTradeHistoryUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI032 /* FetchTradeHistoryUseCaseTests.swift */; };
+		W20000000000000000BB0030 /* AccountMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3001 /* AccountMO.swift */; };
+		W20000000000000000BB0031 /* TransactionMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3002 /* TransactionMO.swift */; };
+		W20000000000000000BB0032 /* CategoryMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3003 /* CategoryMO.swift */; };
+		W20000000000000000BB0033 /* SubcategoryMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3004 /* SubcategoryMO.swift */; };
+		W20000000000000000BB0034 /* BudgetMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA3005 /* BudgetMO.swift */; };
+		W20000000000000000BB0001 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1001 /* CoreDataStack.swift */; };
+		W20000000000000000BB0002 /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1002 /* Decimal+Extensions.swift */; };
+		W20000000000000000BB0003 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA1006 /* Notification+Extensions.swift */; };
+		W20000000000000000BB0004 /* MockAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI001 /* MockAsset.swift */; };
+		W20000000000000000BB0005 /* PortfolioHolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI002 /* PortfolioHolding.swift */; };
+		W20000000000000000BB0006 /* Trade.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI003 /* Trade.swift */; };
+		W20000000000000000BB0007 /* PriceTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI004 /* PriceTick.swift */; };
+		W20000000000000000BB0008 /* PortfolioRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI005 /* PortfolioRepositoryProtocol.swift */; };
+		W20000000000000000BB0009 /* MarketSimulatorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI006 /* MarketSimulatorServiceProtocol.swift */; };
+		W20000000000000000BB000A /* FetchPortfolioUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI007 /* FetchPortfolioUseCase.swift */; };
+		W20000000000000000BB000B /* ExecuteTradeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI008 /* ExecuteTradeUseCase.swift */; };
+		W20000000000000000BB000C /* FetchTradeHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI009 /* FetchTradeHistoryUseCase.swift */; };
+		W20000000000000000BB000D /* PortfolioHoldingMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI010 /* PortfolioHoldingMO.swift */; };
+		W20000000000000000BB000E /* TradeMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI011 /* TradeMO.swift */; };
+		W20000000000000000BB000F /* PortfolioHoldingMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI012 /* PortfolioHoldingMapper.swift */; };
+		W20000000000000000BB0010 /* TradeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI013 /* TradeMapper.swift */; };
+		W20000000000000000BB0011 /* CoreDataPortfolioRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI014 /* CoreDataPortfolioRepository.swift */; };
+		W20000000000000000BB0012 /* MockAssetCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI015 /* MockAssetCatalog.swift */; };
+		W20000000000000000BB0013 /* SparklineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI025 /* SparklineView.swift */; };
+		W20000000000000000BB0014 /* FinScope.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AA9001 /* FinScope.xcdatamodeld */; };
+		W20000000000000000BB0015 /* ConnectivityMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA0001 /* ConnectivityMessage.swift */; };
+		W20000000000000000BB0016 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA0003 /* WatchConnectivityManager.swift */; };
+		W20000000000000000BB0017 /* WatchMarketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA0004 /* WatchMarketService.swift */; };
+		W20000000000000000BB0018 /* WatchCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA0005 /* WatchCompositionRoot.swift */; };
+		W20000000000000000BB0019 /* FinScopeWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA0006 /* FinScopeWatchApp.swift */; };
+		W20000000000000000BB001A /* WatchTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA0007 /* WatchTabView.swift */; };
+		W20000000000000000BB001B /* WatchPortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA0008 /* WatchPortfolioView.swift */; };
+		W20000000000000000BB001C /* WatchHoldingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA0009 /* WatchHoldingRow.swift */; };
+		W20000000000000000BB001D /* WatchMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA000A /* WatchMarketView.swift */; };
+		W20000000000000000BB001E /* WatchAssetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA000B /* WatchAssetRow.swift */; };
+		W20000000000000000BB001F /* WatchAssetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA000C /* WatchAssetDetailView.swift */; };
+		W20000000000000000BB0020 /* WatchTradeFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA000D /* WatchTradeFormView.swift */; };
+		W20000000000000000BB0021 /* WatchPortfolioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA000E /* WatchPortfolioViewModel.swift */; };
+		W20000000000000000BB0022 /* WatchMarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA000F /* WatchMarketViewModel.swift */; };
+		W20000000000000000BB0023 /* WatchAssetDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA0010 /* WatchAssetDetailViewModel.swift */; };
+		W20000000000000000BB0024 /* WatchTradeFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA0011 /* WatchTradeFormViewModel.swift */; };
+		W20000000000000000BB0025 /* ConnectivityMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA0001 /* ConnectivityMessage.swift */; };
+		W20000000000000000BB0026 /* PhoneConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = W10000000000000000AA0002 /* PhoneConnectivityManager.swift */; };
+		W0000000000000000000000C /* FinScopeWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = W00000000000000000000002 /* FinScopeWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,7 +228,28 @@
 			remoteGlobalIDString = 739113ECCD4254630E13FB90;
 			remoteInfo = FinScope;
 		};
+		W00000000000000000000009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0BE772E36E1C0A078E0D858 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = W00000000000000000000001;
+			remoteInfo = FinScopeWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		W0000000000000000000000B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				W0000000000000000000000C /* FinScopeWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2D1A7D646616E50078F042A1 /* FinScopeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinScopeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -286,6 +383,56 @@
 		E10000000000000000AAD005 /* DashboardTransactionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTransactionRowView.swift; sourceTree = "<group>"; };
 		E10000000000000000AAD101 /* MockBudgetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBudgetRepository.swift; sourceTree = "<group>"; };
 		E10000000000000000AAD102 /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI001 /* MockAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAsset.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI002 /* PortfolioHolding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioHolding.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI003 /* Trade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trade.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI004 /* PriceTick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTick.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI005 /* PortfolioRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioRepositoryProtocol.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI006 /* MarketSimulatorServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSimulatorServiceProtocol.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI007 /* FetchPortfolioUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPortfolioUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI008 /* ExecuteTradeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteTradeUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI009 /* FetchTradeHistoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTradeHistoryUseCase.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI010 /* PortfolioHoldingMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioHoldingMO.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI011 /* TradeMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMO.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI012 /* PortfolioHoldingMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioHoldingMapper.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI013 /* TradeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMapper.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI014 /* CoreDataPortfolioRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPortfolioRepository.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI015 /* MockAssetCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAssetCatalog.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI016 /* MarketSimulatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSimulatorService.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI017 /* PortfolioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI018 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI019 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI020 /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI021 /* AssetDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI022 /* AssetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI023 /* TradeFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeFormViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI024 /* TradeFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeFormView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI025 /* SparklineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparklineView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI026 /* HoldingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingRowView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI027 /* TradeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeRowView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI028 /* MockPortfolioRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPortfolioRepository.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI029 /* MockMarketSimulatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMarketSimulatorService.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI030 /* ExecuteTradeUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteTradeUseCaseTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI031 /* FetchPortfolioUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPortfolioUseCaseTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AAI032 /* FetchTradeHistoryUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTradeHistoryUseCaseTests.swift; sourceTree = "<group>"; };
+		W10000000000000000AA0001 /* ConnectivityMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityMessage.swift; sourceTree = "<group>"; };
+		W10000000000000000AA0002 /* PhoneConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnectivityManager.swift; sourceTree = "<group>"; };
+		W10000000000000000AA0003 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		W10000000000000000AA0004 /* WatchMarketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMarketService.swift; sourceTree = "<group>"; };
+		W10000000000000000AA0005 /* WatchCompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCompositionRoot.swift; sourceTree = "<group>"; };
+		W10000000000000000AA0006 /* FinScopeWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinScopeWatchApp.swift; sourceTree = "<group>"; };
+		W10000000000000000AA0007 /* WatchTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTabView.swift; sourceTree = "<group>"; };
+		W10000000000000000AA0008 /* WatchPortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPortfolioView.swift; sourceTree = "<group>"; };
+		W10000000000000000AA0009 /* WatchHoldingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchHoldingRow.swift; sourceTree = "<group>"; };
+		W10000000000000000AA000A /* WatchMarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMarketView.swift; sourceTree = "<group>"; };
+		W10000000000000000AA000B /* WatchAssetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAssetRow.swift; sourceTree = "<group>"; };
+		W10000000000000000AA000C /* WatchAssetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAssetDetailView.swift; sourceTree = "<group>"; };
+		W10000000000000000AA000D /* WatchTradeFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTradeFormView.swift; sourceTree = "<group>"; };
+		W10000000000000000AA000E /* WatchPortfolioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPortfolioViewModel.swift; sourceTree = "<group>"; };
+		W10000000000000000AA000F /* WatchMarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMarketViewModel.swift; sourceTree = "<group>"; };
+		W10000000000000000AA0010 /* WatchAssetDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAssetDetailViewModel.swift; sourceTree = "<group>"; };
+		W10000000000000000AA0011 /* WatchTradeFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTradeFormViewModel.swift; sourceTree = "<group>"; };
+		W00000000000000000000002 /* FinScopeWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinScopeWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +457,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		W00000000000000000000004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -319,6 +473,7 @@
 				58BD64C992BBA90F23B438AF /* FinScope.app */,
 				770605DC19F580A29CA277AF /* FinScopeTests.xctest */,
 				777FCDC88C8250551FC8552A /* FinScopeUITests.xctest */,
+				W00000000000000000000002 /* FinScopeWatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -388,6 +543,8 @@
 				F7F7D71687B0F42EAC981B68 /* FinScope */,
 				CA57627EE1C2E2806E4A7100 /* FinScopeTests */,
 				20E11C6D597F142617B59B03 /* FinScopeUITests */,
+				W30000000000000000CC0001 /* FinScopeWatch */,
+				W30000000000000000CC0006 /* Shared */,
 				1190A5D32F01D0D71382B7C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -470,6 +627,10 @@
 				E10000000000000000AA2005 /* RecurrenceRule.swift */,
 				E10000000000000000AA2006 /* Budget.swift */,
 				E10000000000000000AAF001 /* MonthlyForecast.swift */,
+				E10000000000000000AAI001 /* MockAsset.swift */,
+				E10000000000000000AAI002 /* PortfolioHolding.swift */,
+				E10000000000000000AAI003 /* Trade.swift */,
+				E10000000000000000AAI004 /* PriceTick.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -482,6 +643,7 @@
 				E10000000000000000AA2103 /* CategoryRepositoryProtocol.swift */,
 				E10000000000000000AA2104 /* SubcategoryRepositoryProtocol.swift */,
 				E10000000000000000AA2105 /* BudgetRepositoryProtocol.swift */,
+				E10000000000000000AAI005 /* PortfolioRepositoryProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -494,6 +656,7 @@
 				E30000000000000000CC2007 /* Category */,
 				E30000000000000000CC2008 /* Budget */,
 				E30000000000000000CCF002 /* Forecast */,
+				E30000000000000000CCI001 /* Investment */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -565,6 +728,8 @@
 				E10000000000000000AA3003 /* CategoryMO.swift */,
 				E10000000000000000AA3004 /* SubcategoryMO.swift */,
 				E10000000000000000AA3005 /* BudgetMO.swift */,
+				E10000000000000000AAI010 /* PortfolioHoldingMO.swift */,
+				E10000000000000000AAI011 /* TradeMO.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -577,6 +742,8 @@
 				E10000000000000000AA3103 /* CategoryMapper.swift */,
 				E10000000000000000AA3104 /* SubcategoryMapper.swift */,
 				E10000000000000000AA3105 /* BudgetMapper.swift */,
+				E10000000000000000AAI012 /* PortfolioHoldingMapper.swift */,
+				E10000000000000000AAI013 /* TradeMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -589,6 +756,7 @@
 				E10000000000000000AA3203 /* CoreDataCategoryRepository.swift */,
 				E10000000000000000AA3204 /* CoreDataSubcategoryRepository.swift */,
 				E10000000000000000AA3205 /* CoreDataBudgetRepository.swift */,
+				E10000000000000000AAI014 /* CoreDataPortfolioRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -610,6 +778,7 @@
 				E30000000000000000CC4005 /* Budgets */,
 				E30000000000000000CCF004 /* Forecasts */,
 				E30000000000000000CCD001 /* Dashboard */,
+				E30000000000000000CCI002 /* Investments */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -677,6 +846,8 @@
 				E10000000000000000AA6004 /* MockSubcategoryRepository.swift */,
 				E10000000000000000AAF101 /* MockForecastService.swift */,
 				E10000000000000000AAD101 /* MockBudgetRepository.swift */,
+				E10000000000000000AAI028 /* MockPortfolioRepository.swift */,
+				E10000000000000000AAI029 /* MockMarketSimulatorService.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -711,6 +882,9 @@
 				E10000000000000000AA6206 /* ImportTransactionsUseCaseTests.swift */,
 				E10000000000000000AA6207 /* ExportTransactionsUseCaseTests.swift */,
 				E10000000000000000AAF102 /* GenerateForecastUseCaseTests.swift */,
+				E10000000000000000AAI030 /* ExecuteTradeUseCaseTests.swift */,
+				E10000000000000000AAI031 /* FetchPortfolioUseCaseTests.swift */,
+				E10000000000000000AAI032 /* FetchTradeHistoryUseCaseTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -808,6 +982,7 @@
 			isa = PBXGroup;
 			children = (
 				E10000000000000000AAF002 /* ForecastServiceProtocol.swift */,
+				E10000000000000000AAI006 /* MarketSimulatorServiceProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -824,6 +999,9 @@
 			isa = PBXGroup;
 			children = (
 				E10000000000000000AAF004 /* ForecastService.swift */,
+				E10000000000000000AAI015 /* MockAssetCatalog.swift */,
+				E10000000000000000AAI016 /* MarketSimulatorService.swift */,
+				W10000000000000000AA0002 /* PhoneConnectivityManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -850,12 +1028,102 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		E30000000000000000CCI001 /* Investment */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AAI007 /* FetchPortfolioUseCase.swift */,
+				E10000000000000000AAI008 /* ExecuteTradeUseCase.swift */,
+				E10000000000000000AAI009 /* FetchTradeHistoryUseCase.swift */,
+			);
+			path = Investment;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CCI002 /* Investments */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AAI017 /* PortfolioViewModel.swift */,
+				E10000000000000000AAI018 /* PortfolioView.swift */,
+				E10000000000000000AAI019 /* MarketViewModel.swift */,
+				E10000000000000000AAI020 /* MarketView.swift */,
+				E10000000000000000AAI021 /* AssetDetailViewModel.swift */,
+				E10000000000000000AAI022 /* AssetDetailView.swift */,
+				E10000000000000000AAI023 /* TradeFormViewModel.swift */,
+				E10000000000000000AAI024 /* TradeFormView.swift */,
+				E10000000000000000AAI025 /* SparklineView.swift */,
+				E10000000000000000AAI026 /* HoldingRowView.swift */,
+				E10000000000000000AAI027 /* TradeRowView.swift */,
+			);
+			path = Investments;
+			sourceTree = "<group>";
+		};
 		E30000000000000000CCD002 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				E10000000000000000AAD102 /* DashboardViewModelTests.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		W30000000000000000CC0002 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				W10000000000000000AA0005 /* WatchCompositionRoot.swift */,
+				W10000000000000000AA0006 /* FinScopeWatchApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		W30000000000000000CC0003 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				W10000000000000000AA0003 /* WatchConnectivityManager.swift */,
+				W10000000000000000AA0004 /* WatchMarketService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		W30000000000000000CC0004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				W10000000000000000AA0007 /* WatchTabView.swift */,
+				W10000000000000000AA0008 /* WatchPortfolioView.swift */,
+				W10000000000000000AA0009 /* WatchHoldingRow.swift */,
+				W10000000000000000AA000A /* WatchMarketView.swift */,
+				W10000000000000000AA000B /* WatchAssetRow.swift */,
+				W10000000000000000AA000C /* WatchAssetDetailView.swift */,
+				W10000000000000000AA000D /* WatchTradeFormView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		W30000000000000000CC0005 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				W10000000000000000AA000E /* WatchPortfolioViewModel.swift */,
+				W10000000000000000AA000F /* WatchMarketViewModel.swift */,
+				W10000000000000000AA0010 /* WatchAssetDetailViewModel.swift */,
+				W10000000000000000AA0011 /* WatchTradeFormViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		W30000000000000000CC0001 /* FinScopeWatch */ = {
+			isa = PBXGroup;
+			children = (
+				W30000000000000000CC0002 /* App */,
+				W30000000000000000CC0003 /* Services */,
+				W30000000000000000CC0004 /* Views */,
+				W30000000000000000CC0005 /* ViewModels */,
+			);
+			path = FinScopeWatch;
+			sourceTree = "<group>";
+		};
+		W30000000000000000CC0006 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				W10000000000000000AA0001 /* ConnectivityMessage.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -868,10 +1136,12 @@
 				C4457B71C4481C3983EC1341 /* Sources */,
 				A66CB340AB5F16180BA6A262 /* Frameworks */,
 				90EC7BFE91F03E4CDE8B48E8 /* Resources */,
+				W0000000000000000000000B /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				W0000000000000000000000A /* PBXTargetDependency */,
 			);
 			name = FinScope;
 			productName = FinScope;
@@ -914,6 +1184,23 @@
 			productReference = 770605DC19F580A29CA277AF /* FinScopeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		W00000000000000000000001 /* FinScopeWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = W00000000000000000000008 /* Build configuration list for PBXNativeTarget "FinScopeWatch" */;
+			buildPhases = (
+				W00000000000000000000003 /* Sources */,
+				W00000000000000000000004 /* Frameworks */,
+				W00000000000000000000005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinScopeWatch;
+			productName = FinScopeWatch;
+			productReference = W00000000000000000000002 /* FinScopeWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -935,6 +1222,9 @@
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 739113ECCD4254630E13FB90;
 					};
+					W00000000000000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 				};
 			};
 			buildConfigurationList = A15C1660503C9D18B9702A73 /* Build configuration list for PBXProject "FinScope" */;
@@ -953,6 +1243,7 @@
 				739113ECCD4254630E13FB90 /* FinScope */,
 				F66167C84CE276C72F1073D1 /* FinScopeTests */,
 				B0FD6A2F530B022C90307A57 /* FinScopeUITests */,
+				W00000000000000000000001 /* FinScopeWatch */,
 			);
 		};
 /* End PBXProject section */
@@ -977,6 +1268,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3D0FCF12D178AF59793148F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		W00000000000000000000005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,6 +1317,11 @@
 				E20000000000000000BBF103 /* ForecastServiceTests.swift in Sources */,
 				E20000000000000000BBD101 /* MockBudgetRepository.swift in Sources */,
 				E20000000000000000BBD102 /* DashboardViewModelTests.swift in Sources */,
+				E20000000000000000BBI028 /* MockPortfolioRepository.swift in Sources */,
+				E20000000000000000BBI029 /* MockMarketSimulatorService.swift in Sources */,
+				E20000000000000000BBI030 /* ExecuteTradeUseCaseTests.swift in Sources */,
+				E20000000000000000BBI031 /* FetchPortfolioUseCaseTests.swift in Sources */,
+				E20000000000000000BBI032 /* FetchTradeHistoryUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1128,6 +1431,83 @@
 				E20000000000000000BBD003 /* DashboardAccountRowView.swift in Sources */,
 				E20000000000000000BBD004 /* DashboardBudgetSummaryView.swift in Sources */,
 				E20000000000000000BBD005 /* DashboardTransactionRowView.swift in Sources */,
+				E20000000000000000BBI001 /* MockAsset.swift in Sources */,
+				E20000000000000000BBI002 /* PortfolioHolding.swift in Sources */,
+				E20000000000000000BBI003 /* Trade.swift in Sources */,
+				E20000000000000000BBI004 /* PriceTick.swift in Sources */,
+				E20000000000000000BBI005 /* PortfolioRepositoryProtocol.swift in Sources */,
+				E20000000000000000BBI006 /* MarketSimulatorServiceProtocol.swift in Sources */,
+				E20000000000000000BBI007 /* FetchPortfolioUseCase.swift in Sources */,
+				E20000000000000000BBI008 /* ExecuteTradeUseCase.swift in Sources */,
+				E20000000000000000BBI009 /* FetchTradeHistoryUseCase.swift in Sources */,
+				E20000000000000000BBI010 /* PortfolioHoldingMO.swift in Sources */,
+				E20000000000000000BBI011 /* TradeMO.swift in Sources */,
+				E20000000000000000BBI012 /* PortfolioHoldingMapper.swift in Sources */,
+				E20000000000000000BBI013 /* TradeMapper.swift in Sources */,
+				E20000000000000000BBI014 /* CoreDataPortfolioRepository.swift in Sources */,
+				E20000000000000000BBI015 /* MockAssetCatalog.swift in Sources */,
+				E20000000000000000BBI016 /* MarketSimulatorService.swift in Sources */,
+				E20000000000000000BBI017 /* PortfolioViewModel.swift in Sources */,
+				E20000000000000000BBI018 /* PortfolioView.swift in Sources */,
+				E20000000000000000BBI019 /* MarketViewModel.swift in Sources */,
+				E20000000000000000BBI020 /* MarketView.swift in Sources */,
+				E20000000000000000BBI021 /* AssetDetailViewModel.swift in Sources */,
+				E20000000000000000BBI022 /* AssetDetailView.swift in Sources */,
+				E20000000000000000BBI023 /* TradeFormViewModel.swift in Sources */,
+				E20000000000000000BBI024 /* TradeFormView.swift in Sources */,
+				E20000000000000000BBI025 /* SparklineView.swift in Sources */,
+				E20000000000000000BBI026 /* HoldingRowView.swift in Sources */,
+				E20000000000000000BBI027 /* TradeRowView.swift in Sources */,
+				W20000000000000000BB0025 /* ConnectivityMessage.swift in Sources */,
+				W20000000000000000BB0026 /* PhoneConnectivityManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		W00000000000000000000003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				W20000000000000000BB0001 /* CoreDataStack.swift in Sources */,
+				W20000000000000000BB0002 /* Decimal+Extensions.swift in Sources */,
+				W20000000000000000BB0003 /* Notification+Extensions.swift in Sources */,
+				W20000000000000000BB0004 /* MockAsset.swift in Sources */,
+				W20000000000000000BB0005 /* PortfolioHolding.swift in Sources */,
+				W20000000000000000BB0006 /* Trade.swift in Sources */,
+				W20000000000000000BB0007 /* PriceTick.swift in Sources */,
+				W20000000000000000BB0008 /* PortfolioRepositoryProtocol.swift in Sources */,
+				W20000000000000000BB0009 /* MarketSimulatorServiceProtocol.swift in Sources */,
+				W20000000000000000BB000A /* FetchPortfolioUseCase.swift in Sources */,
+				W20000000000000000BB000B /* ExecuteTradeUseCase.swift in Sources */,
+				W20000000000000000BB000C /* FetchTradeHistoryUseCase.swift in Sources */,
+				W20000000000000000BB0030 /* AccountMO.swift in Sources */,
+				W20000000000000000BB0031 /* TransactionMO.swift in Sources */,
+				W20000000000000000BB0032 /* CategoryMO.swift in Sources */,
+				W20000000000000000BB0033 /* SubcategoryMO.swift in Sources */,
+				W20000000000000000BB0034 /* BudgetMO.swift in Sources */,
+				W20000000000000000BB000D /* PortfolioHoldingMO.swift in Sources */,
+				W20000000000000000BB000E /* TradeMO.swift in Sources */,
+				W20000000000000000BB000F /* PortfolioHoldingMapper.swift in Sources */,
+				W20000000000000000BB0010 /* TradeMapper.swift in Sources */,
+				W20000000000000000BB0011 /* CoreDataPortfolioRepository.swift in Sources */,
+				W20000000000000000BB0012 /* MockAssetCatalog.swift in Sources */,
+				W20000000000000000BB0013 /* SparklineView.swift in Sources */,
+				W20000000000000000BB0014 /* FinScope.xcdatamodeld in Sources */,
+				W20000000000000000BB0015 /* ConnectivityMessage.swift in Sources */,
+				W20000000000000000BB0016 /* WatchConnectivityManager.swift in Sources */,
+				W20000000000000000BB0017 /* WatchMarketService.swift in Sources */,
+				W20000000000000000BB0018 /* WatchCompositionRoot.swift in Sources */,
+				W20000000000000000BB0019 /* FinScopeWatchApp.swift in Sources */,
+				W20000000000000000BB001A /* WatchTabView.swift in Sources */,
+				W20000000000000000BB001B /* WatchPortfolioView.swift in Sources */,
+				W20000000000000000BB001C /* WatchHoldingRow.swift in Sources */,
+				W20000000000000000BB001D /* WatchMarketView.swift in Sources */,
+				W20000000000000000BB001E /* WatchAssetRow.swift in Sources */,
+				W20000000000000000BB001F /* WatchAssetDetailView.swift in Sources */,
+				W20000000000000000BB0020 /* WatchTradeFormView.swift in Sources */,
+				W20000000000000000BB0021 /* WatchPortfolioViewModel.swift in Sources */,
+				W20000000000000000BB0022 /* WatchMarketViewModel.swift in Sources */,
+				W20000000000000000BB0023 /* WatchAssetDetailViewModel.swift in Sources */,
+				W20000000000000000BB0024 /* WatchTradeFormViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1143,6 +1523,11 @@
 			isa = PBXTargetDependency;
 			target = 739113ECCD4254630E13FB90 /* FinScope */;
 			targetProxy = B2DA77F7069416A05C8148AC /* PBXContainerItemProxy */;
+		};
+		W0000000000000000000000A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = W00000000000000000000001 /* FinScopeWatch */;
+			targetProxy = W00000000000000000000009 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1171,6 +1556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FinScope/FinScope.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5KX6A2Y8SP;
@@ -1316,6 +1702,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FinScope/FinScope.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5KX6A2Y8SP;
@@ -1394,6 +1781,60 @@
 			};
 			name = Release;
 		};
+		W00000000000000000000006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FinScopeWatch/FinScopeWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5KX6A2Y8SP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FinScope;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.finscope.FinScope;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.finscope.FinScope.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		W00000000000000000000007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FinScopeWatch/FinScopeWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5KX6A2Y8SP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FinScope;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.finscope.FinScope;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.finscope.FinScope.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1429,6 +1870,15 @@
 			buildConfigurations = (
 				78F151F852A7CFDDBFDDA6F4 /* Debug */,
 				23B03F0C6D368AE79A98904E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		W00000000000000000000008 /* Build configuration list for PBXNativeTarget "FinScopeWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				W00000000000000000000006 /* Debug */,
+				W00000000000000000000007 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
