@@ -128,6 +128,13 @@
 		E20000000000000000BBF101 /* MockForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF101 /* MockForecastService.swift */; };
 		E20000000000000000BBF102 /* GenerateForecastUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF102 /* GenerateForecastUseCaseTests.swift */; };
 		E20000000000000000BBF103 /* ForecastServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAF103 /* ForecastServiceTests.swift */; };
+		E20000000000000000BBD001 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD001 /* DashboardViewModel.swift */; };
+		E20000000000000000BBD002 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD002 /* DashboardView.swift */; };
+		E20000000000000000BBD003 /* DashboardAccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD003 /* DashboardAccountRowView.swift */; };
+		E20000000000000000BBD004 /* DashboardBudgetSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD004 /* DashboardBudgetSummaryView.swift */; };
+		E20000000000000000BBD005 /* DashboardTransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD005 /* DashboardTransactionRowView.swift */; };
+		E20000000000000000BBD101 /* MockBudgetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD101 /* MockBudgetRepository.swift */; };
+		E20000000000000000BBD102 /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD102 /* DashboardViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -272,6 +279,13 @@
 		E10000000000000000AAF101 /* MockForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockForecastService.swift; sourceTree = "<group>"; };
 		E10000000000000000AAF102 /* GenerateForecastUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateForecastUseCaseTests.swift; sourceTree = "<group>"; };
 		E10000000000000000AAF103 /* ForecastServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastServiceTests.swift; sourceTree = "<group>"; };
+		E10000000000000000AAD001 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		E10000000000000000AAD002 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAD003 /* DashboardAccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardAccountRowView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAD004 /* DashboardBudgetSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardBudgetSummaryView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAD005 /* DashboardTransactionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTransactionRowView.swift; sourceTree = "<group>"; };
+		E10000000000000000AAD101 /* MockBudgetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBudgetRepository.swift; sourceTree = "<group>"; };
+		E10000000000000000AAD102 /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +399,7 @@
 				E30000000000000000CC6001 /* Mocks */,
 				E30000000000000000CC6002 /* Domain */,
 				E30000000000000000CC6005 /* Data */,
+				E30000000000000000CCD002 /* Presentation */,
 			);
 			path = FinScopeTests;
 			sourceTree = "<group>";
@@ -594,6 +609,7 @@
 				E30000000000000000CC4004 /* Categories */,
 				E30000000000000000CC4005 /* Budgets */,
 				E30000000000000000CCF004 /* Forecasts */,
+				E30000000000000000CCD001 /* Dashboard */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -660,6 +676,7 @@
 				E10000000000000000AA6003 /* MockCategoryRepository.swift */,
 				E10000000000000000AA6004 /* MockSubcategoryRepository.swift */,
 				E10000000000000000AAF101 /* MockForecastService.swift */,
+				E10000000000000000AAD101 /* MockBudgetRepository.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -821,6 +838,26 @@
 			path = Forecasts;
 			sourceTree = "<group>";
 		};
+		E30000000000000000CCD001 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AAD001 /* DashboardViewModel.swift */,
+				E10000000000000000AAD002 /* DashboardView.swift */,
+				E10000000000000000AAD003 /* DashboardAccountRowView.swift */,
+				E10000000000000000AAD004 /* DashboardBudgetSummaryView.swift */,
+				E10000000000000000AAD005 /* DashboardTransactionRowView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		E30000000000000000CCD002 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000AAD102 /* DashboardViewModelTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -980,6 +1017,8 @@
 				E20000000000000000BBF101 /* MockForecastService.swift in Sources */,
 				E20000000000000000BBF102 /* GenerateForecastUseCaseTests.swift in Sources */,
 				E20000000000000000BBF103 /* ForecastServiceTests.swift in Sources */,
+				E20000000000000000BBD101 /* MockBudgetRepository.swift in Sources */,
+				E20000000000000000BBD102 /* DashboardViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1084,6 +1123,11 @@
 				E20000000000000000BBF005 /* ForecastViewModel.swift in Sources */,
 				E20000000000000000BBF006 /* ForecastView.swift in Sources */,
 				E20000000000000000BBF007 /* ForecastMonthRowView.swift in Sources */,
+				E20000000000000000BBD001 /* DashboardViewModel.swift in Sources */,
+				E20000000000000000BBD002 /* DashboardView.swift in Sources */,
+				E20000000000000000BBD003 /* DashboardAccountRowView.swift in Sources */,
+				E20000000000000000BBD004 /* DashboardBudgetSummaryView.swift in Sources */,
+				E20000000000000000BBD005 /* DashboardTransactionRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

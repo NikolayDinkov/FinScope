@@ -5,10 +5,10 @@ struct DashboardCoordinatorView: View {
 
     var body: some View {
         NavigationStack(path: $coordinator.path) {
-            Text("Dashboard")
-                .font(.largeTitle)
-                .navigationTitle("Dashboard")
-                .navigationDestination(for: NavigationDestination.self) { _ in Text("Not implemented") }
+            DashboardView(viewModel: coordinator.dashboardViewModel)
+                .navigationDestination(for: NavigationDestination.self) { _ in
+                    Text("Not implemented")
+                }
         }
     }
 }

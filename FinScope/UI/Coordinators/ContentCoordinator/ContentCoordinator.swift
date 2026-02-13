@@ -12,7 +12,13 @@ final class ContentCoordinator: Coordinator, ObservableObject {
     private let budgetRepository: BudgetRepositoryProtocol
     private let forecastService: ForecastServiceProtocol
 
-    @MainActor private lazy var dashboardCoordinator = DashboardCoordinator()
+    @MainActor private lazy var dashboardCoordinator = DashboardCoordinator(
+        accountRepository: accountRepository,
+        transactionRepository: transactionRepository,
+        budgetRepository: budgetRepository,
+        categoryRepository: categoryRepository,
+        forecastService: forecastService
+    )
     @MainActor private lazy var accountsCoordinator = AccountsCoordinator(
         accountRepository: accountRepository,
         transactionRepository: transactionRepository,
