@@ -133,7 +133,6 @@
 		E20000000000000000BBD003 /* DashboardAccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD003 /* DashboardAccountRowView.swift */; };
 		E20000000000000000BBD004 /* DashboardBudgetSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD004 /* DashboardBudgetSummaryView.swift */; };
 		E20000000000000000BBD005 /* DashboardTransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD005 /* DashboardTransactionRowView.swift */; };
-		E20000000000000000BBT001 /* FinScopeTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAT001 /* FinScopeTheme.swift */; };
 		E20000000000000000BBD101 /* MockBudgetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD101 /* MockBudgetRepository.swift */; };
 		E20000000000000000BBD102 /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAD102 /* DashboardViewModelTests.swift */; };
 		E20000000000000000BBI001 /* MockAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000AAI001 /* MockAsset.swift */; };
@@ -382,7 +381,6 @@
 		E10000000000000000AAD003 /* DashboardAccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardAccountRowView.swift; sourceTree = "<group>"; };
 		E10000000000000000AAD004 /* DashboardBudgetSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardBudgetSummaryView.swift; sourceTree = "<group>"; };
 		E10000000000000000AAD005 /* DashboardTransactionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTransactionRowView.swift; sourceTree = "<group>"; };
-		E10000000000000000AAT001 /* FinScopeTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinScopeTheme.swift; sourceTree = "<group>"; };
 		E10000000000000000AAD101 /* MockBudgetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBudgetRepository.swift; sourceTree = "<group>"; };
 		E10000000000000000AAD102 /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
 		E10000000000000000AAI001 /* MockAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAsset.swift; sourceTree = "<group>"; };
@@ -774,7 +772,6 @@
 		E30000000000000000CC4001 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				E30000000000000000CCT001 /* Theme */,
 				E30000000000000000CC4002 /* Accounts */,
 				E30000000000000000CC4003 /* Transactions */,
 				E30000000000000000CC4004 /* Categories */,
@@ -1017,14 +1014,6 @@
 				E10000000000000000AAF007 /* ForecastMonthRowView.swift */,
 			);
 			path = Forecasts;
-			sourceTree = "<group>";
-		};
-		E30000000000000000CCT001 /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				E10000000000000000AAT001 /* FinScopeTheme.swift */,
-			);
-			path = Theme;
 			sourceTree = "<group>";
 		};
 		E30000000000000000CCD001 /* Dashboard */ = {
@@ -1442,7 +1431,6 @@
 				E20000000000000000BBD003 /* DashboardAccountRowView.swift in Sources */,
 				E20000000000000000BBD004 /* DashboardBudgetSummaryView.swift in Sources */,
 				E20000000000000000BBD005 /* DashboardTransactionRowView.swift in Sources */,
-				E20000000000000000BBT001 /* FinScopeTheme.swift in Sources */,
 				E20000000000000000BBI001 /* MockAsset.swift in Sources */,
 				E20000000000000000BBI002 /* PortfolioHolding.swift in Sources */,
 				E20000000000000000BBI003 /* Trade.swift in Sources */,

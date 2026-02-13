@@ -5,11 +5,15 @@ struct DashboardAccountRowView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            CircularIcon(systemName: iconName, color: iconColor)
+            Image(systemName: iconName)
+                .foregroundStyle(iconColor)
+                .frame(width: 32, height: 32)
+                .background(iconColor.opacity(0.15))
+                .clipShape(Circle())
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(account.name)
-                    .font(.body.weight(.medium))
+                    .font(.body)
                 Text(account.type.rawValue.capitalized)
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -18,9 +22,9 @@ struct DashboardAccountRowView: View {
             Spacer()
 
             Text(account.balance.currencyFormatted(code: account.currencyCode))
-                .font(.body.bold().monospacedDigit())
+                .font(.body.monospacedDigit())
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, 2)
     }
 
     private var iconName: String {

@@ -11,7 +11,6 @@ struct BudgetListView: View {
                         HStack {
                             Button(action: { viewModel.goToPreviousMonth() }) {
                                 Image(systemName: "chevron.left")
-                                    .font(.body.weight(.semibold))
                             }
                             .buttonStyle(.borderless)
                             Spacer()
@@ -20,7 +19,6 @@ struct BudgetListView: View {
                             Spacer()
                             Button(action: { viewModel.goToNextMonth() }) {
                                 Image(systemName: "chevron.right")
-                                    .font(.body.weight(.semibold))
                             }
                             .buttonStyle(.borderless)
                         }
@@ -111,10 +109,14 @@ private struct BudgetRowView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 12) {
-                CircularIcon(systemName: categoryIcon, color: Color(hex: categoryColorHex))
+                Image(systemName: categoryIcon)
+                    .foregroundStyle(Color(hex: categoryColorHex))
+                    .frame(width: 32, height: 32)
+                    .background(Color(hex: categoryColorHex).opacity(0.15))
+                    .clipShape(Circle())
 
                 Text(categoryName)
-                    .font(.body.weight(.medium))
+                    .font(.body)
 
                 Spacer()
 
@@ -123,7 +125,7 @@ private struct BudgetRowView: View {
                     .foregroundStyle(.secondary)
             }
 
-            GradientProgressBar(fraction: fraction)
+            BudgetProgressBar(spent: spent, limit: limit)
         }
         .padding(.vertical, 4)
     }
@@ -140,7 +142,25 @@ private struct BudgetProgressBar: View {
         return NSDecimalNumber(decimal: spent / limit).doubleValue
     }
 
+    private var barColor: Color {
+        switch fraction {
+        case ..<0.75: .green
+        case ..<1.0: .yellow
+        default: .red
+        }
+    }
+
     var body: some View {
-        GradientProgressBar(fraction: fraction)
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 4)
+                    .fill(Color(.systemGray5))
+
+                RoundedRectangle(cornerRadius: 4)
+                    .fill(barColor)
+                    .frame(width: min(geometry.size.width * min(fraction, 1.0), geometry.size.width))
+            }
+        }
+        .frame(height: 8)
     }
 }

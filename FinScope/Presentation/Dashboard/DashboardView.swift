@@ -4,20 +4,14 @@ struct DashboardView: View {
     @Bindable var viewModel: DashboardViewModel
 
     var body: some View {
-        ScrollView {
+        List {
             if !viewModel.isEmpty {
-                VStack(spacing: FinScopeTheme.sectionSpacing) {
-                    balanceSection
-                    accountsSection
-                    budgetSection
-                    transactionsSection
-                    forecastSection
-                }
-                .padding(.horizontal)
-                .padding(.bottom, FinScopeTheme.sectionSpacing)
+                balanceSection
+                budgetSection
+                transactionsSection
+                forecastSection
             }
         }
-        .background(Color(UIColor.systemGroupedBackground))
         .overlay {
             if viewModel.isEmpty && !viewModel.isLoading {
                 ContentUnavailableView(
@@ -41,63 +35,29 @@ struct DashboardView: View {
         }
     }
 
-    // MARK: - Hero Balance Card
+    // MARK: - Balance Section
 
     @ViewBuilder
     private var balanceSection: some View {
         if !viewModel.accounts.isEmpty {
-            VStack(spacing: 8) {
-                Text("Total Balance")
-                    .font(.subheadline.weight(.medium))
-                    .foregroundStyle(.white.opacity(0.8))
+            Section("Total Balance") {
+                VStack(spacing: 4) {
+                    Text(viewModel.totalBalance.currencyFormatted())
+                        .font(.title.bold().monospacedDigit())
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 4)
 
-                Text(viewModel.totalBalance.currencyFormatted())
-                    .font(.system(size: 36, weight: .bold, design: .rounded).monospacedDigit())
-                    .foregroundStyle(.white)
+                ForEach(viewModel.previewAccounts) { account in
+                    DashboardAccountRowView(account: account)
+                }
 
-                if !viewModel.forecasts.isEmpty {
-                    ChangeIndicator(
-                        value: viewModel.forecastBalanceChange,
-                        formatted: viewModel.forecastBalanceChange.currencyFormatted(),
-                        font: .subheadline.weight(.medium).monospacedDigit()
-                    )
-                    .colorScheme(.dark)
+                if viewModel.accounts.count > 4 {
+                    Text("\(viewModel.accounts.count - 4) more accounts")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
                 }
             }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 24)
-            .padding(.horizontal, FinScopeTheme.cardPadding)
-            .background(FinScopeTheme.primaryGradient, in: RoundedRectangle(cornerRadius: FinScopeTheme.cardCornerRadius))
-        }
-    }
-
-    // MARK: - Accounts Section
-
-    @ViewBuilder
-    private var accountsSection: some View {
-        if !viewModel.accounts.isEmpty {
-            VStack(alignment: .leading, spacing: 12) {
-                SectionHeader(title: "Accounts")
-
-                VStack(spacing: 0) {
-                    ForEach(Array(viewModel.previewAccounts.enumerated()), id: \.element.id) { index, account in
-                        DashboardAccountRowView(account: account)
-                        if index < viewModel.previewAccounts.count - 1 {
-                            Divider().padding(.leading, 52)
-                        }
-                    }
-
-                    if viewModel.accounts.count > 4 {
-                        Divider().padding(.leading, 52)
-                        Text("\(viewModel.accounts.count - 4) more accounts")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 8)
-                    }
-                }
-            }
-            .cardStyle()
         }
     }
 
@@ -106,9 +66,7 @@ struct DashboardView: View {
     @ViewBuilder
     private var budgetSection: some View {
         if !viewModel.budgets.isEmpty {
-            VStack(alignment: .leading, spacing: 12) {
-                SectionHeader(title: "Budget This Month")
-
+            Section("Budget This Month") {
                 DashboardBudgetSummaryView(
                     totalSpent: viewModel.totalSpent,
                     totalBudgeted: viewModel.totalBudgeted,
@@ -121,7 +79,6 @@ struct DashboardView: View {
                     categoryColorHex: viewModel.categoryColorHex(for:)
                 )
             }
-            .cardStyle()
         }
     }
 
@@ -130,24 +87,16 @@ struct DashboardView: View {
     @ViewBuilder
     private var transactionsSection: some View {
         if !viewModel.recentTransactions.isEmpty {
-            VStack(alignment: .leading, spacing: 12) {
-                SectionHeader(title: "Recent Transactions")
-
-                VStack(spacing: 0) {
-                    ForEach(Array(viewModel.recentTransactions.enumerated()), id: \.element.id) { index, transaction in
-                        DashboardTransactionRowView(
-                            transaction: transaction,
-                            categoryName: viewModel.categoryName(for: transaction.categoryId ?? UUID()),
-                            categoryIcon: viewModel.categoryIcon(for: transaction.categoryId ?? UUID()),
-                            categoryColorHex: viewModel.categoryColorHex(for: transaction.categoryId ?? UUID())
-                        )
-                        if index < viewModel.recentTransactions.count - 1 {
-                            Divider().padding(.leading, 52)
-                        }
-                    }
+            Section("Recent Transactions") {
+                ForEach(viewModel.recentTransactions) { transaction in
+                    DashboardTransactionRowView(
+                        transaction: transaction,
+                        categoryName: viewModel.categoryName(for: transaction.categoryId ?? UUID()),
+                        categoryIcon: viewModel.categoryIcon(for: transaction.categoryId ?? UUID()),
+                        categoryColorHex: viewModel.categoryColorHex(for: transaction.categoryId ?? UUID())
+                    )
                 }
             }
-            .cardStyle()
         }
     }
 
@@ -156,56 +105,44 @@ struct DashboardView: View {
     @ViewBuilder
     private var forecastSection: some View {
         if !viewModel.forecasts.isEmpty {
-            VStack(alignment: .leading, spacing: 12) {
-                SectionHeader(title: "Forecast")
+            Section("3-Month Forecast") {
+                VStack(spacing: 8) {
+                    HStack {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Current")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                            Text(viewModel.totalBalance.currencyFormatted())
+                                .font(.headline.monospacedDigit())
+                        }
 
-                HStack {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Current")
-                            .font(.caption)
+                        Spacer()
+
+                        Image(systemName: viewModel.forecastBalanceChange >= 0
+                              ? "arrow.right" : "arrow.right")
                             .foregroundStyle(.secondary)
-                        Text(viewModel.totalBalance.currencyFormatted())
-                            .font(.headline.bold().monospacedDigit())
+
+                        Spacer()
+
+                        VStack(alignment: .trailing, spacing: 2) {
+                            Text("Projected")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                            Text(viewModel.projectedBalance.currencyFormatted())
+                                .font(.headline.monospacedDigit())
+                        }
                     }
 
-                    Spacer()
-
-                    Image(systemName: "arrow.right")
-                        .foregroundStyle(.tertiary)
-
-                    Spacer()
-
-                    VStack(alignment: .trailing, spacing: 2) {
-                        Text("Projected")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                        Text(viewModel.projectedBalance.currencyFormatted())
-                            .font(.headline.bold().monospacedDigit())
+                    HStack(spacing: 4) {
+                        Image(systemName: viewModel.forecastBalanceChange >= 0
+                              ? "arrow.up.right" : "arrow.down.right")
+                        Text(viewModel.forecastBalanceChange.currencyFormatted())
                     }
+                    .font(.subheadline.monospacedDigit())
+                    .foregroundStyle(viewModel.forecastBalanceChange >= 0 ? .green : .red)
                 }
-
-                // Sparkline from forecast data
-                let forecastTicks = viewModel.forecasts.enumerated().map { index, forecast in
-                    PriceTick(
-                        ticker: "forecast",
-                        price: forecast.projectedBalance,
-                        timestamp: forecast.month
-                    )
-                }
-                SparklineView(
-                    ticks: forecastTicks,
-                    lineColor: viewModel.forecastBalanceChange >= 0 ? .green : .red
-                )
-                .frame(height: 60)
-
-                ChangeIndicator(
-                    value: viewModel.forecastBalanceChange,
-                    formatted: viewModel.forecastBalanceChange.currencyFormatted(),
-                    showBackground: true
-                )
-                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(.vertical, 4)
             }
-            .cardStyle()
         }
     }
 }

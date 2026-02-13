@@ -2,9 +2,6 @@ import SwiftUI
 
 struct SparklineView: View {
     let ticks: [PriceTick]
-    var lineColor: Color? = nil
-    var showGradient: Bool = true
-    var lineWidth: CGFloat = 2
 
     var body: some View {
         GeometryReader { geometry in
@@ -15,37 +12,7 @@ struct SparklineView: View {
             let effectiveRange = range > 0 ? range : 1.0
 
             let isPositive = (prices.last ?? 0) >= (prices.first ?? 0)
-            let color: Color = lineColor ?? (isPositive ? .green : .red)
-
-            if showGradient, prices.count > 1 {
-                Path { path in
-                    let stepX = geometry.size.width / CGFloat(prices.count - 1)
-                    let height = geometry.size.height
-
-                    for (index, price) in prices.enumerated() {
-                        let x = CGFloat(index) * stepX
-                        let normalizedY = (price - minPrice) / effectiveRange
-                        let y = height - (CGFloat(normalizedY) * height)
-
-                        if index == 0 {
-                            path.move(to: CGPoint(x: x, y: y))
-                        } else {
-                            path.addLine(to: CGPoint(x: x, y: y))
-                        }
-                    }
-
-                    path.addLine(to: CGPoint(x: geometry.size.width, y: geometry.size.height))
-                    path.addLine(to: CGPoint(x: 0, y: geometry.size.height))
-                    path.closeSubpath()
-                }
-                .fill(
-                    LinearGradient(
-                        colors: [color.opacity(0.25), color.opacity(0.0)],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                )
-            }
+            let color: Color = isPositive ? .green : .red
 
             Path { path in
                 guard prices.count > 1 else { return }
@@ -64,7 +31,7 @@ struct SparklineView: View {
                     }
                 }
             }
-            .stroke(color, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
+            .stroke(color, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
         }
     }
 }

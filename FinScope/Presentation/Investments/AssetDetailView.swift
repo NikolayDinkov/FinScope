@@ -4,108 +4,61 @@ struct AssetDetailView: View {
     @Bindable var viewModel: AssetDetailViewModel
 
     var body: some View {
-        ScrollView {
+        List {
             if let asset = viewModel.asset {
-                VStack(spacing: FinScopeTheme.sectionSpacing) {
-                    // Price + Chart Card
-                    VStack(alignment: .leading, spacing: 12) {
+                // Price Section
+                Section {
+                    VStack(alignment: .leading, spacing: 8) {
                         Text(viewModel.currentPrice.currencyFormatted())
-                            .font(.system(size: 34, weight: .bold, design: .rounded).monospacedDigit())
-
-                        ChangeIndicator(
-                            value: viewModel.priceChange,
-                            formatted: "\(viewModel.priceChange >= 0 ? "+" : "")\(viewModel.priceChange.percentageFormatted())",
-                            showBackground: true
-                        )
+                            .font(.largeTitle.bold().monospacedDigit())
+                        HStack(spacing: 4) {
+                            Image(systemName: viewModel.priceChange >= 0 ? "arrow.up.right" : "arrow.down.right")
+                            Text("\(viewModel.priceChange >= 0 ? "+" : "")\(viewModel.priceChange.percentageFormatted())")
+                        }
+                        .font(.subheadline.monospacedDigit())
+                        .foregroundStyle(viewModel.priceChange >= 0 ? .green : .red)
 
                         if !viewModel.priceHistory.isEmpty {
                             SparklineView(ticks: viewModel.priceHistory)
-                                .frame(height: 160)
+                                .frame(height: 120)
                         }
                     }
-                    .cardStyle()
+                    .padding(.vertical, 4)
+                }
 
-                    // Info Section
-                    VStack(alignment: .leading, spacing: 12) {
-                        SectionHeader(title: "Info")
+                // Info Section
+                Section("Info") {
+                    LabeledContent("Type", value: asset.type.displayName)
+                    LabeledContent("Sector", value: asset.sector)
+                    LabeledContent("Base Price", value: asset.basePrice.currencyFormatted())
+                }
 
-                        HStack(spacing: 8) {
-                            InfoPill(label: "Type", value: asset.type.displayName)
-                            InfoPill(label: "Sector", value: asset.sector)
-                            InfoPill(label: "Base", value: asset.basePrice.currencyFormatted())
+                // Position Section
+                if let holding = viewModel.holding {
+                    Section("Your Position") {
+                        LabeledContent("Shares", value: "\(holding.quantity)")
+                        LabeledContent("Avg Cost", value: holding.averageCostBasis.currencyFormatted())
+                        LabeledContent("Market Value", value: viewModel.holdingValue.currencyFormatted())
+
+                        HStack {
+                            Text("Gain/Loss")
+                            Spacer()
+                            Text(viewModel.holdingGainLoss.currencyFormatted())
+                                .foregroundStyle(viewModel.holdingGainLoss >= 0 ? .green : .red)
                         }
-                    }
-                    .cardStyle()
-
-                    // Position Section
-                    if let holding = viewModel.holding {
-                        VStack(alignment: .leading, spacing: 12) {
-                            SectionHeader(title: "Your Position")
-
-                            VStack(spacing: 10) {
-                                HStack {
-                                    Text("Shares")
-                                        .foregroundStyle(.secondary)
-                                    Spacer()
-                                    Text("\(holding.quantity)")
-                                        .bold().monospacedDigit()
-                                }
-                                Divider()
-                                HStack {
-                                    Text("Avg Cost")
-                                        .foregroundStyle(.secondary)
-                                    Spacer()
-                                    Text(holding.averageCostBasis.currencyFormatted())
-                                        .bold().monospacedDigit()
-                                }
-                                Divider()
-                                HStack {
-                                    Text("Market Value")
-                                        .foregroundStyle(.secondary)
-                                    Spacer()
-                                    Text(viewModel.holdingValue.currencyFormatted())
-                                        .bold().monospacedDigit()
-                                }
-                                Divider()
-                                HStack {
-                                    Text("Gain/Loss")
-                                        .foregroundStyle(.secondary)
-                                    Spacer()
-                                    ChangeIndicator(
-                                        value: viewModel.holdingGainLoss,
-                                        formatted: viewModel.holdingGainLoss.currencyFormatted(),
-                                        font: .body.bold().monospacedDigit(),
-                                        showBackground: true
-                                    )
-                                }
-                            }
-                            .font(.subheadline)
-                        }
-                        .cardStyle()
-                    }
-
-                    // Trade History
-                    if !viewModel.trades.isEmpty {
-                        VStack(alignment: .leading, spacing: 12) {
-                            SectionHeader(title: "Trade History")
-
-                            VStack(spacing: 0) {
-                                ForEach(Array(viewModel.trades.enumerated()), id: \.element.id) { index, trade in
-                                    TradeRowView(trade: trade)
-                                    if index < viewModel.trades.count - 1 {
-                                        Divider().padding(.leading, 52)
-                                    }
-                                }
-                            }
-                        }
-                        .cardStyle()
                     }
                 }
-                .padding(.horizontal)
-                .padding(.bottom, FinScopeTheme.sectionSpacing)
+
+                // Trade History
+                if !viewModel.trades.isEmpty {
+                    Section("Trade History") {
+                        ForEach(viewModel.trades) { trade in
+                            TradeRowView(trade: trade)
+                        }
+                    }
+                }
             }
         }
-        .background(Color(UIColor.systemGroupedBackground))
         .navigationTitle(viewModel.asset?.ticker ?? "")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
@@ -132,26 +85,6 @@ struct AssetDetailView: View {
         .task {
             await viewModel.load()
         }
-    }
-}
-
-// MARK: - Info Pill
-
-private struct InfoPill: View {
-    let label: String
-    let value: String
-
-    var body: some View {
-        VStack(spacing: 4) {
-            Text(label)
-                .font(.caption2)
-                .foregroundStyle(.secondary)
-            Text(value)
-                .font(.caption.weight(.semibold))
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 8)
-        .background(Color(UIColor.systemGray6), in: RoundedRectangle(cornerRadius: 10))
     }
 }
 

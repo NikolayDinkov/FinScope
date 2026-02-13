@@ -4,37 +4,29 @@ struct MarketView: View {
     @Bindable var viewModel: MarketViewModel
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: FinScopeTheme.sectionSpacing) {
-                PillSegmentControl(
-                    options: AssetTypeFilter.allCases,
-                    selected: $viewModel.selectedFilter,
-                    label: { $0.rawValue }
-                )
-
-                VStack(alignment: .leading, spacing: 0) {
-                    ForEach(Array(viewModel.filteredAssets.enumerated()), id: \.element.id) { index, asset in
-                        AssetRowView(
-                            asset: asset,
-                            price: viewModel.currentPrices[asset.ticker] ?? asset.basePrice,
-                            change: viewModel.priceChanges[asset.ticker] ?? 0
-                        )
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            viewModel.onSelectAsset?(asset.ticker)
-                        }
-
-                        if index < viewModel.filteredAssets.count - 1 {
-                            Divider().padding(.leading, 52)
-                        }
-                    }
+        List {
+            Picker("Filter", selection: $viewModel.selectedFilter) {
+                ForEach(AssetTypeFilter.allCases, id: \.self) { filter in
+                    Text(filter.rawValue).tag(filter)
                 }
-                .cardStyle()
             }
+            .pickerStyle(.segmented)
+            .listRowBackground(Color.clear)
+            .listRowInsets(EdgeInsets())
             .padding(.horizontal)
-            .padding(.bottom, FinScopeTheme.sectionSpacing)
+
+            ForEach(viewModel.filteredAssets) { asset in
+                AssetRowView(
+                    asset: asset,
+                    price: viewModel.currentPrices[asset.ticker] ?? asset.basePrice,
+                    change: viewModel.priceChanges[asset.ticker] ?? 0
+                )
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    viewModel.onSelectAsset?(asset.ticker)
+                }
+            }
         }
-        .background(Color(UIColor.systemGroupedBackground))
         .navigationTitle("Market")
         .searchable(text: $viewModel.searchText, prompt: "Search by ticker or name")
         .task {
@@ -48,26 +40,8 @@ private struct AssetRowView: View {
     let price: Decimal
     let change: Decimal
 
-    private var iconColor: Color {
-        switch asset.type {
-        case .stock: .blue
-        case .bond: .purple
-        case .etf: .orange
-        }
-    }
-
-    private var iconName: String {
-        switch asset.type {
-        case .stock: "chart.line.uptrend.xyaxis"
-        case .bond: "building.columns"
-        case .etf: "square.grid.2x2"
-        }
-    }
-
     var body: some View {
-        HStack(spacing: 12) {
-            CircularIcon(systemName: iconName, color: iconColor)
-
+        HStack {
             VStack(alignment: .leading, spacing: 2) {
                 Text(asset.ticker)
                     .font(.headline)
@@ -79,17 +53,14 @@ private struct AssetRowView: View {
 
             Spacer()
 
-            VStack(alignment: .trailing, spacing: 4) {
+            VStack(alignment: .trailing, spacing: 2) {
                 Text(price.currencyFormatted())
-                    .font(.body.bold().monospacedDigit())
+                    .font(.body.monospacedDigit())
                 Text("\(change >= 0 ? "+" : "")\(change.percentageFormatted())")
-                    .font(.caption2.weight(.semibold).monospacedDigit())
+                    .font(.caption.monospacedDigit())
                     .foregroundStyle(change >= 0 ? .green : .red)
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 3)
-                    .background((change >= 0 ? Color.green : Color.red).opacity(0.12), in: Capsule())
             }
         }
-        .padding(.vertical, 6)
+        .padding(.vertical, 2)
     }
 }

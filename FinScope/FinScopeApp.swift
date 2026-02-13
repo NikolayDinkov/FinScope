@@ -13,7 +13,6 @@ struct FinScopeApp: App {
             appCoordinator.start()
                 .task {
                     await CompositionRoot.shared.seedDefaultCategories()
-                    await CompositionRoot.shared.seedDummyDataIfNeeded()
                     CompositionRoot.shared.marketService.start()
                     PhoneConnectivityManager.shared.activate(
                         marketService: CompositionRoot.shared.marketService

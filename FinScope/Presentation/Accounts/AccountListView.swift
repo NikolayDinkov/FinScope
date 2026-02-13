@@ -60,12 +60,14 @@ private struct AccountRowView: View {
     let account: Account
 
     var body: some View {
-        HStack(spacing: 12) {
-            CircularIcon(systemName: account.type.iconName, color: account.type.color)
+        HStack {
+            Image(systemName: account.type.iconName)
+                .foregroundStyle(account.type.color)
+                .frame(width: 32)
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(account.name)
-                    .font(.body.weight(.medium))
+                    .font(.body)
                 Text(account.type.displayName)
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -74,10 +76,10 @@ private struct AccountRowView: View {
             Spacer()
 
             Text(account.balance.currencyFormatted(code: account.currencyCode))
-                .font(.body.bold().monospacedDigit())
+                .font(.body.monospacedDigit())
                 .foregroundStyle(account.balance >= 0 ? Color.primary : Color.red)
         }
-        .padding(.vertical, 6)
+        .padding(.vertical, 4)
     }
 }
 

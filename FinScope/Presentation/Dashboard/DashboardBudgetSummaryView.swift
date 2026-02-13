@@ -21,7 +21,7 @@ struct DashboardBudgetSummaryView: View {
                     .foregroundStyle(.secondary)
             }
 
-            GradientProgressBar(fraction: budgetFraction)
+            BudgetDashboardProgressBar(fraction: budgetFraction)
 
             ForEach(topBudgets) { budget in
                 DashboardBudgetCategoryRow(
@@ -50,10 +50,14 @@ private struct DashboardBudgetCategoryRow: View {
 
     var body: some View {
         HStack(spacing: 10) {
-            CircularIcon(systemName: categoryIcon, color: Color(hex: categoryColorHex), size: 28)
+            Image(systemName: categoryIcon)
+                .foregroundStyle(Color(hex: categoryColorHex))
+                .frame(width: 24, height: 24)
+                .background(Color(hex: categoryColorHex).opacity(0.15))
+                .clipShape(Circle())
 
             Text(categoryName)
-                .font(.subheadline.weight(.medium))
+                .font(.subheadline)
 
             Spacer()
 
@@ -61,5 +65,33 @@ private struct DashboardBudgetCategoryRow: View {
                 .font(.caption.monospacedDigit())
                 .foregroundStyle(.secondary)
         }
+    }
+}
+
+// MARK: - Progress Bar
+
+private struct BudgetDashboardProgressBar: View {
+    let fraction: Double
+
+    private var barColor: Color {
+        switch fraction {
+        case ..<0.75: .green
+        case ..<1.0: .yellow
+        default: .red
+        }
+    }
+
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 4)
+                    .fill(Color(.systemGray5))
+
+                RoundedRectangle(cornerRadius: 4)
+                    .fill(barColor)
+                    .frame(width: min(geometry.size.width * min(fraction, 1.0), geometry.size.width))
+            }
+        }
+        .frame(height: 8)
     }
 }
